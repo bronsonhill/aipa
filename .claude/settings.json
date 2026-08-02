@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "wiki-skills": {
+      "source": {
+        "source": "github",
+        "repo": "bronsonhill/wiki-skills"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "wiki@wiki-skills": true
+  }
+}

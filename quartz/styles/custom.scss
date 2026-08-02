@@ -1,0 +1,30 @@
+@use "./base.scss";
+@use "./variables.scss" as *;
+
+// put your custom CSS here!
+
+// cue-card decks: each Q/A pair is rendered as a reveal by the CueCards transformer
+details.cue-card {
+  border: 1px solid var(--lightgray);
+  border-radius: 5px;
+  padding: 0.6rem 0.8rem;
+  margin: 0.8rem 0;
+  background-color: var(--light);
+
+  & > summary {
+    cursor: pointer;
+    font-weight: $semiBoldWeight;
+    // keep the marker on the first line of a wrapped question
+    list-style-position: outside;
+  }
+
+  &[open] > summary {
+    margin-bottom: 0.6rem;
+    border-bottom: 1px solid var(--lightgray);
+    padding-bottom: 0.6rem;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
