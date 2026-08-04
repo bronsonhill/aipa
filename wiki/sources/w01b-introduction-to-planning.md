@@ -14,11 +14,11 @@ handbook entry, since Canvas is not publicly accessible.
 
 ## Overview
 
-The second live lecture opens with the Shakey robot film from 1970 and a question:
-of everything that came out of Shakey — the planner, the algorithm, the language —
-what actually survived? The answer, and the lecture's organising claim, is the
-language. STRIPS the algorithm is a historical curiosity; STRIPS the language is still
-in use, now as the core fragment of PDDL. The stated objective is that by the end of
+The second live lecture opens with the [[shakey-the-robot|Shakey robot]] film from 1970
+and a question: of everything that came out of Shakey — the planner, the algorithm, the
+language — what actually survived? The answer, and the lecture's organising claim, is
+the language. [[strips|STRIPS]] the algorithm is a historical curiosity; STRIPS the
+language is still in use, now as the core fragment of [[pddl]]. The stated objective is that by the end of
 the hour every student can speak a new language.
 
 The argument for why language matters is made through Roman numerals. Multiplying 39
@@ -46,17 +46,22 @@ where two different blocks sit on the same block, because `clear(y)` never becom
 false. The point drawn out is that syntactic errors get caught by the parser, while
 semantic errors quietly admit plans that do not correspond to anything real. Hence the
 recommended toolchain includes [[val]] as a plan validator, and hence the advice to write
-expected plans and plans that *should not* exist and test the model against both. The
-same warning is applied to LLM-generated plans, which are not sound and need validating
-against the model.
+expected plans and plans that *should not* exist and test the model against both — see
+[[plan-validation]] for that workflow and the three strategies for debugging a domain
+that returns no plan. The same warning is applied to LLM-generated plans, which are not
+sound and need validating against the model.
 
 The remainder covers [[pddl]] proper: the domain/problem split (actions and predicates
 in the domain, objects, initial state and goal in the problem — one domain, unboundedly
 many problems), typing, the [[closed-world-assumption]] on `:init` only, and the
 [[lifted-representation]] that distinguishes predicate logic from the propositional
 model underneath. The accompanying slides go further into [[planning-complexity]]
-(PlanEx and PlanLen are PSPACE-complete), the history of computational approaches from
-GPS through Graphplan to heuristic search, and the [[international-planning-competition]].
+(PlanEx and PlanLen are PSPACE-complete, placing planning above
+[[boolean-satisfiability|SAT]]), the split between
+[[satisficing-and-optimal-planning|satisficing and optimal planning]], the history of
+computational approaches from GPS through Graphplan to
+[[search-and-inference|heuristic search]], and the
+[[international-planning-competition]].
 
 ## Key concepts
 

@@ -66,4 +66,4 @@ problem/language/model/solver toolchain has a language in it.
 ## Sources
 
 - [[w01b-introduction-to-planning]] — introduces the tuple, derives the semantics, and models the blocksworld `stack` action live
-- [[w01-prerecorded-ai-overview]] — video 4 gives the informal state-variable version of the same model
+- [[w01-prerecorded-ai-overview]] — video 4 gives the informal state-variable account of the model STRIPS encodes, without naming the language

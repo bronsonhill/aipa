@@ -18,37 +18,46 @@ knowledge into programs, that methodology failed for reasons that were scientifi
 rather than technical, and the field's recovery from the 1990s onward came from
 reframing AI problems as *models* solved by *general solvers*.
 
-The first two videos are historical. The Dartmouth meeting of 1956 coined the term
+The first two videos are historical. The [[dartmouth-workshop|Dartmouth meeting of 1956]] coined the term
 "artificial intelligence" and set out the conjecture that every aspect of intelligence
 can be described precisely enough for a machine to simulate it. Research through the
 following decades concentrated on knowledge representation and programming — Lisp,
 Prolog, rule-based systems, expert systems — and a typical dissertation picked a task,
 introspected on how it should be solved, and encoded that reasoning as a program. The
-methodological failure was that a theory expressed as a program cannot be proved wrong:
+methodological failure was that a [[theories-as-programs|theory expressed as a program]]
+cannot be proved wrong:
 when it fails you can always blame missing knowledge. The three available responses
 (narrow the domain, call the program a demo, add more knowledge) each sacrifice
 generality, scientific value, or comprehensibility, and the resulting impasse produced
 an AI winter.
 
 The middle videos set out the replacement paradigm. From the 1990s the field's papers
-fall into categories — SAT and constraints, search and planning, probabilistic
+fall into categories — [[boolean-satisfiability|SAT]] and
+[[constraint-satisfaction-problem|constraints]], search and planning, probabilistic
 reasoning, probabilistic planning, machine learning, natural language, vision and
 robotics, multi-agent systems — and each is more usefully understood as a *model* with
 associated *solvers* than as a bag of techniques. The worked illustration is a system
 of linear equations solved by Gauss-Jordan: the solver is general because it cares only
 that the input is a linear system, not what the variables mean. AI's models are the
 same shape but intractable, so the research problem is scaling up, and scaling up means
-recognising and exploiting the structure of a problem. The recurring pair of ingredients
-across every model is search (exploring possibilities) and inference (cheap reasoning
-that guides the search).
+recognising and exploiting the structure of a problem. Video 4 gives the first informal
+statement of [[classical-planning]] — state variables, actions that change them, an
+initial state and a goal — which [[w01b-introduction-to-planning]] later formalises and
+encodes in [[strips]]. The recurring pair of ingredients
+across every model is [[search-and-inference|search and inference]]: search explores the
+possibilities, and inference is the cheap reasoning that guides it. Planning is also
+established here as harder than SAT and CSP, being PSPACE-complete rather than
+NP-complete — see [[planning-complexity]].
 
 The last videos cover why anyone wants this. Board games mattered historically because
 they are deterministic and fully observable, which makes them a clean testbed for
 scaling; the applications since range across speech recognition, recommender systems,
 medical treatment planning, self-driving path planning, and Atari. Planning specifically
-has shone in space exploration (NASA's 1998 autonomous spacecraft controller), business
-process management, game AI, interactive storytelling, network penetration testing,
-logistics, and warehouse automation.
+has shone in space exploration (NASA's 1998 autonomous spacecraft controller, the
+[[remote-agent-experiment]]), business process management, game AI, interactive
+storytelling, network penetration testing, logistics, and warehouse automation. The
+field's evaluation is empirical throughout, run on shared benchmarks and in the
+[[international-planning-competition]].
 
 ## Video list
 
@@ -83,7 +92,7 @@ Videos 3 and 4 carry the technical content the week 1b live lecture builds on.
 
 - Dartmouth 1956, the coining of "artificial intelligence", and the founding proposal's conjecture
 - The four Dartmouth proposers and what each is known for
-- *Computers and Thought* (1963) and what its table of contents reveals about 1960s AI research
+- *Computers and Thought* (1963) and what its table of contents reveals about 1960s AI research, opening with Turing on whether a machine can think — see [[turing-test]]
 - 1960s–80s AI: Lisp, Prolog, rule-based programming, expert systems, shells and architectures
 - The theories-as-programs methodology and why it cannot be falsified
 - Three responses to a failing program, and the weakness of each

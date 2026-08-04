@@ -24,9 +24,9 @@ adopts.
 The definitional argument proceeds by elimination. Minsky's engineering definition —
 making machines do things that would require intelligence if done by humans — founders
 on the question of which human activities qualify, since eagles see better than humans
-without anyone calling eagles intelligent. Turing's imitation game (from *Computing
-Machinery and Intelligence*, 1950) operationalises it as a test, and Searle's Chinese
-Room argues in reply that a system passing the test may be simulating understanding
+without anyone calling eagles intelligent. Turing's [[turing-test|imitation game]] (from
+*Computing Machinery and Intelligence*, 1950) operationalises it as a test, and Searle's
+Chinese Room argues in reply that a system passing the test may be simulating understanding
 rather than possessing it. Lipovetzky applies this directly to large language models:
 they can simulate intelligence, but whether they are intelligent is not a well-defined
 question. Haugeland's "machines with minds in the full and literal sense" points at
@@ -49,12 +49,14 @@ whole problem.
 
 The administrative half sets out the subject's shape. The theme is *bounded* general
 AI rather than AGI, which Lipovetzky rejects as ill-defined and therefore unfalsifiable.
-Weeks 2–4 cover classical planning under three bounding assumptions (single initial
-state, deterministic actions, full observability), which together reduce the problem to
-graph search over an exponentially large graph; the interest lies in deriving heuristics
-automatically and in width-based search. Later weeks relax those bounds toward MDPs and
-reinforcement learning, with weeks 11–12 on advanced topics including the two-way
-relationship between LLMs and planning.
+Weeks 2 to 4 cover [[classical-planning]] under three bounding assumptions (single
+initial state, deterministic actions, full observability), which together reduce the
+problem to graph search over an exponentially large graph; the interest lies in deriving
+heuristics automatically and in width-based search, both instances of
+[[search-and-inference]]. Later weeks relax those bounds toward
+[[markov-decision-process|MDPs]] and reinforcement learning, with weeks 11 and 12 on
+advanced topics including the two-way relationship between LLMs and planning. The
+modelling language for the first assignment is [[pddl]].
 
 ## Key concepts
 
