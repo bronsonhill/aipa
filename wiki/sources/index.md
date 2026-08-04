@@ -6,4 +6,8 @@ Index of external learning resources. Because course materials are copyright, no
 
 ## Pages
 
-_No pages yet — run the `ingest` skill on your first lecture, reading, or paper._
+### Week 1
+
+- [[w01-prerecorded-ai-overview]] — six background videos on AI history, models and solvers, planning models, and applications | added: 2026-08-04
+- [[w01a-introduction-to-ai]] — what AI is and is not; rational agents, the four definitions, and subject structure | added: 2026-08-04
+- [[w01b-introduction-to-planning]] — state models, STRIPS and PDDL, blocksworld, complexity, and the planning toolchain | added: 2026-08-04
