@@ -82,6 +82,7 @@ are genuinely different pieces of software rather than the same solver with a fl
 - Compare with [[boolean-satisfiability]] and [[constraint-satisfaction-problem]], both NP-complete
 - The practical response is [[search-and-inference]]
 - Example domain: [[blocksworld]]
+- Key to the $2^{|F|}$ notation: [[reading-the-notation]]
 
 ## Sources
 

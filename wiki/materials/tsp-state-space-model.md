@@ -156,6 +156,7 @@ added, which is where the difficulty actually lives.
 - The general skill and the assessed standard: [[state-space-modelling]]
 - Why the size matters: [[planning-complexity]]
 - The same modelling task in a language rather than set notation: [[strips]], [[blocksworld]]
+- Key to the tuple and set-builder notation used above: [[reading-the-notation]]
 
 ## Sources
 

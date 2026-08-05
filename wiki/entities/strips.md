@@ -63,6 +63,10 @@ that follows. Understanding the four-component tuple and the $(s \setminus \math
 mapping from language to state model is the concrete demonstration of why the
 problem/language/model/solver toolchain has a language in it.
 
+## Relationships
+
+- Key to the tuple and set-builder notation in the formula above: [[reading-the-notation]]
+
 ## Sources
 
 - [[w01b-introduction-to-planning]] — introduces the tuple, derives the semantics, and models the blocksworld `stack` action live
