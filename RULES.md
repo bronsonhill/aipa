@@ -25,7 +25,8 @@ agent.
 - Tags: frontmatter `tags: [tag1, tag2]`.
 - Frontmatter: every content page starts with a `---` YAML block containing at
   least `title`, `type`, `tags`, `date` (see `.claude/wiki-schema.md` for the
-  per-type fields, e.g. `link` on source pages).
+  per-type fields, e.g. `link` on source pages). No colons in `title` — an
+  unquoted colon is invalid YAML and silently breaks the whole block.
 - Headings: start with `# Title` matching the page's title.
 - Lists: `-` for bullets, `1.` for numbered steps.
 - Emphasis: `**bold**`, `*italic*` (avoid `_..._` for italics).
