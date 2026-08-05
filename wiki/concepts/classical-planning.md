@@ -65,6 +65,7 @@ above SAT and CSP in worst-case difficulty.
 
 ## Relationships
 
+- The practice of building instances of this model: [[state-space-modelling]]; worked example [[tsp-state-space-model]]
 - Encoded compactly in [[strips]] and [[pddl]]
 - Relaxations: [[conformant-planning]], [[markov-decision-process]], [[partially-observable-mdp]]
 - Sits inside the [[models-and-solvers]] paradigm; the control problem it answers is described in [[control-problem]]

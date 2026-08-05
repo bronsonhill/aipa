@@ -9,6 +9,7 @@ Index of core concepts and theory in AI planning for autonomy.
 ### State models
 
 - [[classical-planning]] — the base model: single initial state, deterministic actions, full observability | added: 2026-08-04
+- [[state-space-modelling]] — the skill of building one: choosing what a state records, and justifying it | added: 2026-08-05
 - [[conformant-planning]] — uncertainty about the initial state with no sensing; one plan must work everywhere | added: 2026-08-04
 - [[markov-decision-process]] — probabilistic transitions with full observability; solutions are policies | added: 2026-08-04
 - [[partially-observable-mdp]] — probabilistic transitions plus a sensor model; policies over belief states | added: 2026-08-04

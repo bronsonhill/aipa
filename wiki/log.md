@@ -29,3 +29,16 @@ lectures (transcripts), and both pre-release slide handouts.
 ## [2026-08-04] lint | post-ingest check
 
 - 37 pages scanned, 0 issues. Report: `wiki/lint-reports/2026-08-04.md`
+
+## [2026-08-05] ingest | Tutorial 1 — Classical planning model
+
+- **Source page:** `wiki/sources/t01-classical-planning-model.md`
+- **New concept pages:** state-space-modelling
+- **New material pages:** tsp-state-space-model
+- **Updated pages:** classical-planning, planning-complexity,
+  w01b-introduction-to-planning, sources/index, concepts/index, materials/index
+- **Notes:** state counts in the TSP write-up were verified by exhaustive
+  enumeration with BFS reachability for n = 2..6, not asserted. Tutorial PDF read
+  for understanding only and not committed, per `source_policy: link-only`.
+  Naming: tutorials use a `tNN-` prefix, extending the schema's `wNNx-` lecture
+  convention.

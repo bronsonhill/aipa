@@ -1,6 +1,6 @@
 ---
 title: Content Schema
-version: 0.2
+version: 0.3
 subject: AI Planning for Autonomy
 wiki_root: wiki
 source_policy: link-only
@@ -49,9 +49,20 @@ write from it.
 - **Naming:** kebab-case.md (e.g. `a-star-search.md`).
 - **Source naming:** lecture sources are prefixed `wNNx-` where `NN` is the
   zero-padded week and `x` is a letter ordering the lectures within that week
-  (`w01a-introduction.md`, `w01b-search-fundamentals.md`). Titles match the
-  prefix — `Week 1a: Introduction`. Don't name the day of the week; the letter
-  carries the ordering, and days shift between offerings.
+  (`w01a-introduction.md`, `w01b-search-fundamentals.md`). Don't name the day of
+  the week; the letter carries the ordering, and days shift between offerings.
+
+  Tutorials are prefixed `tNN-` with the zero-padded week and no letter
+  (`t01-classical-planning-model.md`), since there is one tutorial per week. Where
+  a week's pre-recorded videos are a single resource distinct from its lectures,
+  use `wNN-` with no letter (`w01-prerecorded-ai-overview.md`); it sorts ahead of
+  the lettered lectures, which matches the order the material is meant to be
+  consumed in.
+
+  Titles match the prefix — `Week 1a Introduction`, `Tutorial 1 Classical Planning
+  Model`. **Do not put a colon in a title.** An unquoted colon is invalid YAML and
+  breaks the frontmatter block, and the failure is quiet: Quartz falls back to the
+  filename rather than reporting an error. Use a space or a comma instead.
 - **Frontmatter (YAML)**, required on every content page:
   ```yaml
   ---

@@ -140,5 +140,6 @@ computational approaches from GPS through Graphplan to
 ## Connections
 
 - Formalises the model hierarchy sketched in video 4 of [[w01-prerecorded-ai-overview]].
+- Applied in [[t01-classical-planning-model]], where the same formalism is used on TSP and a grid domain in set notation rather than in a language. The skill is [[state-space-modelling]]; the worked model is [[tsp-state-space-model]].
 - Continues from [[w01a-introduction-to-ai]], which established *acting rationally* as the target and named the three classical assumptions.
 - The compactness argument here is the concrete payoff of [[models-and-solvers]].

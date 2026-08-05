@@ -78,6 +78,7 @@ are genuinely different pieces of software rather than the same solver with a fl
 ## Relationships
 
 - Applies to [[classical-planning]]; the two decision problems correspond to [[satisficing-and-optimal-planning]]
+- Where the exponent comes from in practice: [[state-space-modelling]]
 - Compare with [[boolean-satisfiability]] and [[constraint-satisfaction-problem]], both NP-complete
 - The practical response is [[search-and-inference]]
 - Example domain: [[blocksworld]]
