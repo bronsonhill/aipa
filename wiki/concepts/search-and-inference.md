@@ -51,8 +51,11 @@ that what remains is easier.
 - The scaling mechanism behind [[models-and-solvers]]
 - Applied to [[classical-planning]], [[boolean-satisfiability]] and [[constraint-satisfaction-problem]]
 - Why the choice of language matters for inference: [[strips]], [[pddl]]
+- The historical survey of approaches that have implemented this pairing for planning: [[planning-computational-approaches]]
+- A structural, heuristic-free form of exploiting a factored representation: [[iterative-width-search]]
 
 ## Sources
 
 - [[w01-prerecorded-ai-overview]] — video 4 names search and inference as the two universal ingredients; video 6 lists the scaling routes
 - [[w01b-introduction-to-planning]] — the two roles of language, specification and computation, are the same point from the language side
+- [[w04-prerecorded-planning-complexity]] — restates the dual role of a planning language (specification and exposed structure) and surveys the historical approaches built on it

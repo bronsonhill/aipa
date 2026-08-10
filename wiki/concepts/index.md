@@ -35,3 +35,14 @@ Index of core concepts and theory in AI planning for autonomy.
 - [[satisficing-and-optimal-planning]] — any plan versus a cheapest plan, and why the techniques differ | added: 2026-08-04
 - [[boolean-satisfiability]] — SAT as the reference model: minimal, NP-complete, solved well in practice | added: 2026-08-04
 - [[constraint-satisfaction-problem]] — finite-domain variables under constraints; SAT's generalisation | added: 2026-08-04
+- [[planning-computational-approaches]] — GPS, POCL, GraphPlan, SATPlan, heuristic search, and model checking | added: 2026-08-10
+
+### Search
+
+- [[search-node]] — the unit a search algorithm manipulates: state plus parent, action, and $g(n)$ | added: 2026-08-10
+- [[blind-search]] — search using only the problem definition, judged on four properties | added: 2026-08-10
+- [[breadth-first-search]] — shallowest-first, FIFO; complete, optimal only under uniform cost | added: 2026-08-10
+- [[depth-first-search]] — deepest-first, LIFO; linear space, no optimality guarantee | added: 2026-08-10
+- [[iterative-deepening-search]] — depth-first re-run at increasing depth limits | added: 2026-08-10
+- [[novelty]] — how much new atom-subset information a state carries relative to search history | added: 2026-08-10
+- [[iterative-width-search]] — breadth-first search pruned by novelty; polynomial when width is small | added: 2026-08-10

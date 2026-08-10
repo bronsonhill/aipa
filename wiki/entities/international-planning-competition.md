@@ -16,8 +16,9 @@ planning made its evaluation empirical.
 
 - Held in 1998, 2000, 2002, 2004, 2006, 2008, 2011, 2014, 2018, 2019.
 - [[pddl]] was created for the first competition in 1998 and has been extended alongside it since — PDDL 2.1 in 2003 added numeric fluents and durative actions.
-- Separate tracks for satisficing and optimal planning, reflecting that the two problems need different techniques. See [[satisficing-and-optimal-planning]].
+- Separate tracks for satisficing and optimal planning, reflecting that the two problems need different techniques. See [[satisficing-and-optimal-planning]]. Further tracks address uncertainty and learning, corresponding to [[markov-decision-process]] and [[partially-observable-mdp]] models.
 - Benchmarks are devised fresh by the organisers so that solvers cannot be tuned to problems they have already seen. This is what makes the competition a test of generality rather than of fitting.
+- More than 40 benchmark domains and, by the lecturer's estimate, over 2,000 problem instances are available via [[editor-planning-domains]]; 74 planners competed in the 2011 IPC.
 
 ## Selected winners
 
@@ -52,3 +53,4 @@ anything.
 
 - [[w01b-introduction-to-planning]] — competition history, winners by track, and the disclaimer on interpreting results
 - [[w01-prerecorded-ai-overview]] — video 3 explains benchmarks and competitions as the field's empirical methodology
+- [[w04-prerecorded-planning-complexity]] — gives the domain/instance/planner-count figures and restates the caveat on interpreting a given year's results as a general ranking

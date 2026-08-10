@@ -42,3 +42,40 @@ lectures (transcripts), and both pre-release slide handouts.
   for understanding only and not committed, per `source_policy: link-only`.
   Naming: tutorials use a `tNN-` prefix, extending the schema's `wNNx-` lecture
   convention.
+
+## [2026-08-10] ingest | Week 2 — blind search, width/novelty, and week 4 complexity pre-release
+
+Batch ingest: two week 2 live lecture transcripts (Monday: blind search and its
+properties; Friday: factored representations, novelty, and iterative width),
+three week 2 pre-recorded videos (search fundamentals), two week 4 pre-recorded
+videos released early (complexity, computational approaches), and two further
+week 1 pre-recorded videos (search intro, search terminology) that extend the
+existing week 1 pre-recorded source page.
+
+- **Source pages:** `wiki/sources/w02a-blind-search-properties.md`,
+  `wiki/sources/w02b-width-and-iterative-search.md`,
+  `wiki/sources/w02-prerecorded-search-fundamentals.md`,
+  `wiki/sources/w04-prerecorded-planning-complexity.md`
+- **New concept pages:** search-node, blind-search, breadth-first-search,
+  depth-first-search, iterative-deepening-search, novelty, iterative-width-search,
+  planning-computational-approaches
+- **New entity pages:** general-problem-solver, jorg-hoffmann
+- **Updated pages:** w01-prerecorded-ai-overview (added videos 7–8),
+  state-space-modelling, planning-complexity, satisficing-and-optimal-planning,
+  search-and-inference, blocksworld, international-planning-competition,
+  editor-planning-domains, sources/index, concepts/index, entities/index
+- **Notes:** a third transcript supplied in the same batch ("Summary so far",
+  ~2 minutes) was identified as the same video already catalogued as video 6 of
+  `w01-prerecorded-ai-overview.md` — its content (research-agenda summary,
+  scaling routes) matches that page's existing coverage, so no duplicate source
+  page was created. The two week 2 live-lecture transcripts were supplied as
+  local files without recording links; the Canvas link on both source pages
+  points to the public handbook entry, consistent with `source_policy:
+  link-only` and the convention on `w01a`/`w01b`. Transcripts for the seven
+  YouTube videos were pulled via `yt-dlp` auto-captions (not the video pages
+  themselves, which do not expose transcript text to a static fetch) and
+  processed in a scratch directory outside the repo, not committed.
+
+## [2026-08-10] lint | post-ingest check
+
+- 58 pages scanned, 0 issues. Report: `wiki/lint-reports/2026-08-10.md`

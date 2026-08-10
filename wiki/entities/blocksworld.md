@@ -62,3 +62,5 @@ outside.
 ## Sources
 
 - [[w01b-introduction-to-planning]] — the worked `stack` modelling, the missing `clear(y)` exercise, the state-count table, and the PlanEx/PlanLen separation
+- [[w04-prerecorded-planning-complexity]] — corroborates the state-count growth on a live 16-block instance in editor.planning.domains, and gives the domain-specific unstack-then-rebuild strategy that makes plan existence polynomial
+- [[w02b-width-and-iterative-search]] — used as the running example contrasting flat versus factored (variable-based) state representations

@@ -29,6 +29,16 @@ This is why the two are separate research tracks with separate competition categ
 the [[international-planning-competition]], and why a satisficing planner is not simply
 an optimal planner given less time.
 
+The same split shows up in blind search. Heuristic search dominates
+[[blind-search|blind search]] by a wide margin for satisficing planning, but for
+optimal planning the gap narrows considerably: admissible heuristics (required for
+optimality guarantees) are weaker guidance than the inadmissible heuristics satisficing
+solvers are free to use, and computing them carries a cost that does not always pay
+off relative to a well-chosen blind search algorithm. Systematic search (which
+considers the full frontier, as [[blind-search]] does) is required for optimal
+planning; local search algorithms, which keep only one or a few candidate solutions,
+cannot guarantee optimality but have successful instances in the satisficing track.
+
 ## Formula
 
 For a plan $\pi = a_0, \dots, a_{n-1}$ with cost
@@ -68,7 +78,9 @@ search (Gamer).
 - Defined over the plans of [[classical-planning]]
 - Evaluated separately in the [[international-planning-competition]]
 - The quality of guidance available is the subject of [[search-and-inference]]
+- The blind-search side of the split: [[blind-search]]
 
 ## Sources
 
 - [[w01b-introduction-to-planning]] — defines both algorithmic problems, notes that techniques do not transfer, and lists IPC winners by category
+- [[w01-prerecorded-ai-overview]] — video 7 states the relative empirical performance of heuristic versus blind search on each track, and the systematic-versus-local search distinction

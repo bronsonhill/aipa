@@ -101,8 +101,11 @@ the instance size changes.
 - The same task carried out in a language rather than set notation: [[strips]], [[pddl]], [[lifted-representation]]
 - Worked example with verified counts: [[tsp-state-space-model]]
 - Checking a model admits only what it should: [[plan-validation]]
+- Variable choice determines what [[novelty]]-based search can reach: [[iterative-width-search]]
 
 ## Sources
 
 - [[t01-classical-planning-model]] — the TSP and Grid exercises, the two-model comparison, and the SILO1 standard
 - [[w01b-introduction-to-planning]] — the formalism being instantiated, and the blocksworld modelling done live
+- [[w02-prerecorded-search-fundamentals]] — restates the six-tuple explicitly (states, initial state, goal states, applicability function, transition function, cost function) and shows that swapping any one component yields a genuinely different model requiring different algorithms
+- [[w02b-width-and-iterative-search]] — the flat-versus-factored representation contrast, and the grid-representation exercise showing that variable choice determines which states a novelty-bounded search can reach

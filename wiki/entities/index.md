@@ -28,3 +28,8 @@ Index of people, models, tools, papers, and software relevant to AI Planning for
 - [[guang-hu]] — lecturer for weeks 6 to 12; epistemic planning and multi-agent reasoning | added: 2026-08-04
 - [[dartmouth-workshop]] — the 1956 meeting that coined "artificial intelligence" | added: 2026-08-04
 - [[international-planning-competition]] — the benchmark competition that made planning research empirical | added: 2026-08-04
+- [[jorg-hoffmann]] — author of the recommended planning survey paper | added: 2026-08-10
+
+### Planning history
+
+- [[general-problem-solver]] — Newell and Simon's early planner; means-ends analysis and regression | added: 2026-08-10

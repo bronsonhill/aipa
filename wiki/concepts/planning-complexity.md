@@ -34,6 +34,29 @@ strategy always works — unstack everything onto the table and rebuild), while 
 whether the goal can be reached in at most $B$ steps is NP-complete. Finding *a* plan is
 easy; finding a *short* one is not.
 
+Both decision problems are phrased in Turing-machine complexity terms: P is the class
+decidable in polynomial time on a deterministic Turing machine, NP the same on a
+non-deterministic one (informally, a machine with an oracle that can always choose the
+right next move), and PSPACE the class decidable in polynomial *space* on a
+deterministic machine. NP is generally believed (not proven) to be a strict subset of
+PSPACE, which is why the PSPACE-completeness of PlanEx and PlanLen places planning
+strictly above the NP-complete combinatorial problems — such as travelling salesman —
+that classical optimisation is usually drawn from. Papadimitriou's caveat applies here
+directly: worst-case complexity results describe the hardest instances a domain
+permits, not the instances a solver typically encounters, and the field's methodology
+(see [[search-and-inference]] and empirical benchmarking via the
+[[international-planning-competition]]) is built around that gap.
+
+Whether a problem's PSPACE-hardness applies at the domain-specific level, though, is a
+separate question from what the general problem class allows: it is the *general*
+planning problem — arbitrary domain, arbitrary PDDL description — that is PSPACE-
+complete. A fixed domain like blocksworld can have polynomial PlanEx precisely because
+the domain-specific structure (a single gripper, one block moved at a time, no
+irreversible dead-ends under the simple unstack-then-rebuild strategy) is exploitable in
+a way the general problem's worst case is not. Width-based search, see
+[[iterative-width-search]], is a general-purpose (not domain-specific) way of
+exploiting this same kind of structure automatically.
+
 ## Formula
 
 The state space induced by a [[strips]] task with fact set $F$ is
@@ -83,8 +106,11 @@ are genuinely different pieces of software rather than the same solver with a fl
 - The practical response is [[search-and-inference]]
 - Example domain: [[blocksworld]]
 - Key to the $2^{|F|}$ notation: [[reading-the-notation]]
+- Approaches to solving PSPACE-hard planning at scale: [[planning-computational-approaches]], [[iterative-width-search]]
 
 ## Sources
 
 - [[w01b-introduction-to-planning]] — defines PlanEx and PlanLen, states PSPACE-completeness, gives the blocksworld state counts and the domain-specific separation
 - [[w01-prerecorded-ai-overview]] — video 4 states that planning is harder than SAT and CSP
+- [[w04-prerecorded-planning-complexity]] — the Turing-machine argument for PSPACE-completeness, the P/NP/PSPACE class definitions, Papadimitriou's worst-case caveat, and a live editor.planning.domains demonstration on a 16-block instance
+- [[w02b-width-and-iterative-search]] — reframes the PSPACE-complete worst case against typical-case behaviour, motivating width as a structural explanation for the easy/hard split

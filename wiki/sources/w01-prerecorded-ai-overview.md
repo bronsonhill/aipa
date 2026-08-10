@@ -3,7 +3,7 @@ title: Week 1 Pre-recorded Videos on AI and Planning
 type: source
 source_type: video
 link: https://www.youtube.com/watch?v=vmt-OuH4iSI
-tags: [week-01, introduction, history, models-and-solvers, applications]
+tags: [week-01, introduction, history, models-and-solvers, applications, search]
 date: 2026-08-04
 ---
 
@@ -11,12 +11,13 @@ date: 2026-08-04
 
 ## Overview
 
-Six short videos by [[nir-lipovetzky]] that carry roughly an hour of background
-knowledge and are meant to be watched *before* the live week 1 lectures. They trace a
-single argument: AI in the 1960s–80s tried to capture intelligence by hand-coding
-knowledge into programs, that methodology failed for reasons that were scientific
-rather than technical, and the field's recovery from the 1990s onward came from
-reframing AI problems as *models* solved by *general solvers*.
+Eight short videos by [[nir-lipovetzky]] that carry roughly an hour of background
+knowledge and are meant to be watched *before* the live week 1 lectures. The first six
+trace a single argument: AI in the 1960s–80s tried to capture intelligence by
+hand-coding knowledge into programs, that methodology failed for reasons that were
+scientific rather than technical, and the field's recovery from the 1990s onward came
+from reframing AI problems as *models* solved by *general solvers*. Two further videos,
+released later, formalise the search machinery those models are solved with.
 
 The first two videos are historical. The [[dartmouth-workshop|Dartmouth meeting of 1956]] coined the term
 "artificial intelligence" and set out the conjecture that every aspect of intelligence
@@ -59,6 +60,26 @@ storytelling, network penetration testing, logistics, and warehouse automation. 
 field's evaluation is empirical throughout, run on shared benchmarks and in the
 [[international-planning-competition]].
 
+Videos 7 and 8, released alongside week 2, shift from motivation to formal machinery.
+"Intro to Search" states the [[state-space-modelling|formal state model]] as a six-tuple
+— states, initial state, goal states, an applicability function, a deterministic
+transition function, and an action-cost function — and observes that swapping out any
+one of the model's core ingredients (a set rather than a single initial state,
+probabilistic rather than deterministic transitions, rewards rather than costs) yields a
+genuinely different model requiring different algorithms and producing different kinds
+of solution. It draws the correspondence between a state model and a graph (states as
+nodes, single-action reachability as edges), and states this graph is always encoded
+*implicitly*: it does not fit in memory as a whole, so search must discover it while
+running, from the initial state outward. It closes with the distinctions between blind
+and heuristic (informed) search, and between systematic and local search, and notes
+that heuristic search dominates satisficing planning while blind search remains
+competitive for optimal planning — see [[satisficing-and-optimal-planning]]. "Search
+terminology" then defines the shared vocabulary used from week 2 onward: a
+[[search-node|search node]] (a state plus the path information used to reach it), the
+cost function $g(n)$, the cheapest-cost function $g^*(n)$, node expansion, search
+strategy, and the open list/closed list distinction between a search tree's frontier and
+its already-expanded interior.
+
 ## Video list
 
 | # | Title | Length | Link |
@@ -69,8 +90,12 @@ field's evaluation is empirical throughout, run on shared benchmarks and in the
 | 4 | AI Planning Models | 7:19 | https://www.youtube.com/watch?v=sJMCCIQpbZY |
 | 5 | Applications | 11:54 | https://www.youtube.com/watch?v=5vaolo43Zu0 |
 | 6 | Summary so far | 2:01 | https://www.youtube.com/watch?v=LD8KseUyeEs |
+| 7 | Intro to Search | — | https://www.youtube.com/watch?v=DvTSEVwkt98 |
+| 8 | Search terminology | — | https://www.youtube.com/watch?v=mcINtGFnZa8 |
 
-Videos 3 and 4 carry the technical content the week 1b live lecture builds on.
+Videos 3 and 4 carry the technical content the week 1b live lecture builds on. Videos 7
+and 8 carry the technical content [[w02a-blind-search-properties]] and
+[[w02-prerecorded-search-fundamentals]] build on.
 
 ## Key concepts
 
@@ -81,6 +106,9 @@ Videos 3 and 4 carry the technical content the week 1b live lecture builds on.
 - [[boolean-satisfiability]]
 - [[constraint-satisfaction-problem]]
 - [[partially-observable-mdp]]
+- [[state-space-modelling]]
+- [[search-node]]
+- [[satisficing-and-optimal-planning]]
 
 ## Key entities
 
@@ -114,6 +142,12 @@ Videos 3 and 4 carry the technical content the week 1b live lecture builds on.
 - Applications: Shazam via hidden Markov models and Viterbi, recommender systems, medical treatment sequencing, self-driving path planning, Atari
 - Planning applications: NASA space exploration, business process management, the game *F.E.A.R.*, interactive storytelling, penetration testing, logistics, Xerox PARC printing, warehouse automation and multi-agent pathfinding
 - Routes to scaling up: better heuristics, conflict learning, islands of tractability, problem transformations
+- The formal state model as a six-tuple: states, initial state, goal states, applicability function, transition function, cost function
+- Changing any core model ingredient (single versus multiple initial states, deterministic versus probabilistic transitions, costs versus rewards) yields a different model requiring different algorithms
+- The correspondence between a state model and a graph, and why that graph is always encoded implicitly rather than stored in full
+- Blind versus heuristic (informed) search, and systematic versus local search
+- Heuristic search dominates blind search for satisficing planning; for optimal planning the gap is much smaller
+- Search node, $g(n)$, $g^*(n)$, node expansion, search strategy, open list, closed list
 
 ## Notable claims / results
 
@@ -131,3 +165,4 @@ Videos 3 and 4 carry the technical content the week 1b live lecture builds on.
 
 - The live lectures that build on these videos: [[w01a-introduction-to-ai]] and [[w01b-introduction-to-planning]].
 - Videos 3 and 4 introduce the model hierarchy that [[w01b-introduction-to-planning]] formalises as [[classical-planning]], [[conformant-planning]], [[markov-decision-process]] and [[partially-observable-mdp]].
+- Videos 7 and 8 introduce the search-node vocabulary and formal state model that [[w02-prerecorded-search-fundamentals]] and [[w02a-blind-search-properties]] build on directly.
