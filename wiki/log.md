@@ -79,3 +79,12 @@ existing week 1 pre-recorded source page.
 ## [2026-08-10] lint | post-ingest check
 
 - 58 pages scanned, 0 issues. Report: `wiki/lint-reports/2026-08-10.md`
+
+## [2026-08-10] cue-cards | Week 2 search deck
+
+- **Material page:** `wiki/materials/week-02-search-cue-cards.md` (Obsidian Spaced Repetition format, 36 cards)
+- **Anki export:** `wiki/materials/week-02-search-cue-cards.anki.tsv` (gitignored, regenerable)
+- **Source pages covered:** w02a-blind-search-properties, w02b-width-and-iterative-search, w02-prerecorded-search-fundamentals
+- **Concept pages covered:** search-node, blind-search, breadth-first-search, depth-first-search, iterative-deepening-search, novelty, iterative-width-search, plus week-2-relevant sections of state-space-modelling and satisficing-and-optimal-planning
+- **Updated pages:** materials/index
+- **Notes:** week 1 and week 4 content (also in the wiki) was deliberately excluded from this deck's scope per the user's request; every algorithm (BFS/DFS/IDS/IW/SIW) has both a mechanism card and at least one contrast/failure-mode card.
