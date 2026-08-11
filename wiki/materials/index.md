@@ -9,3 +9,4 @@ Index of worked examples, notes, and derived study material.
 - [[tsp-state-space-model]] — TSP modelled as a state space, with state counts verified by enumeration and the assessed standard worked through | added: 2026-08-05
 - [[reading-the-notation]] — key to angle-bracket tuples, set-builder notation, and the recurring symbols in the wiki's model definitions | added: 2026-08-05
 - [[week-02-search-cue-cards]] — 36 spaced-repetition cards on blind search, search-node vocabulary, novelty, and iterative width | added: 2026-08-10
+- [[week-01-foundations-cue-cards]] — 37 spaced-repetition cards on AI definitions, models-and-solvers, the control problem, SAT/CSP, the classical/conformant/MDP/POMDP state-model hierarchy, and STRIPS/PDDL modelling | added: 2026-08-11
