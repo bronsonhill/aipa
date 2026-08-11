@@ -88,3 +88,13 @@ existing week 1 pre-recorded source page.
 - **Concept pages covered:** search-node, blind-search, breadth-first-search, depth-first-search, iterative-deepening-search, novelty, iterative-width-search, plus week-2-relevant sections of state-space-modelling and satisficing-and-optimal-planning
 - **Updated pages:** materials/index
 - **Notes:** week 1 and week 4 content (also in the wiki) was deliberately excluded from this deck's scope per the user's request; every algorithm (BFS/DFS/IDS/IW/SIW) has both a mechanism card and at least one contrast/failure-mode card.
+
+## [2026-08-11] cue-cards | Week 1 foundations deck
+
+- **Material page:** `wiki/materials/week-01-foundations-cue-cards.md` (Obsidian Spaced Repetition format, 37 cards)
+- **Anki export:** not generated in this session (the `to_anki_tsv.py` converter from the `wiki-skills` plugin was not available locally); regenerate with the `cue-cards` skill when running with the plugin installed.
+- **Source pages covered:** w01-prerecorded-ai-overview, w01a-introduction-to-ai, w01b-introduction-to-planning
+- **Concept pages covered:** rational-agent, turing-test, control-problem, classical-planning, models-and-solvers, theories-as-programs, search-and-inference, boolean-satisfiability, constraint-satisfaction-problem, conformant-planning, markov-decision-process, partially-observable-mdp, closed-world-assumption, lifted-representation, planning-complexity, plan-validation
+- **Entity pages covered:** strips, pddl, blocksworld
+- **Updated pages:** materials/index
+- **Notes:** week 2 content (blind search, search-node vocabulary, width-based search) was deliberately excluded, since it already has its own deck; every concept has at least 2 cards, and the state-model hierarchy and PDDL/STRIPS formalism each carry a contrast and a failure-mode card in addition to elaborative and mechanism cards.
