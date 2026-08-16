@@ -79,8 +79,11 @@ search (Gamer).
 - Evaluated separately in the [[international-planning-competition]]
 - The quality of guidance available is the subject of [[search-and-inference]]
 - The blind-search side of the split: [[blind-search]]
+- Satisficing algorithms: [[greedy-best-first-search]], [[best-first-width-search]], [[weighted-a-star]], [[enforced-hill-climbing]]
+- Optimal algorithms: [[a-star-search]], [[ida-star]]
 
 ## Sources
 
 - [[w01b-introduction-to-planning]] — defines both algorithmic problems, notes that techniques do not transfer, and lists IPC winners by category
 - [[w01-prerecorded-ai-overview]] — video 7 states the relative empirical performance of heuristic versus blind search on each track, and the systematic-versus-local search distinction
+- [[w03-prerecorded-heuristic-search]] — names the four most common satisficing algorithms and A\* as the optimal-planning standard, and notes local search is ruled out for optimal planning

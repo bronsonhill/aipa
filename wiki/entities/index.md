@@ -22,12 +22,20 @@ Index of people, models, tools, papers, and software relevant to AI Planning for
 - [[shakey-the-robot]] — the 1970 SRI robot that gave STRIPS its name | added: 2026-08-04
 - [[remote-agent-experiment]] — NASA's 1998 planner-controlled spacecraft, planning's first great success | added: 2026-08-04
 
+### Applications and benchmarks
+
+- [[arcade-learning-environment]] — Atari 2600 as a planning benchmark; where IW met deep RL | added: 2026-08-16
+- [[lapkt]] — the Lightweight Automated Planning ToolKiT; reference implementation of IW and BFWS | added: 2026-08-16
+
 ### People and organisations
 
 - [[nir-lipovetzky]] — lecturer for weeks 1 to 6; automated planning researcher | added: 2026-08-04
 - [[guang-hu]] — lecturer for weeks 6 to 12; epistemic planning and multi-agent reasoning | added: 2026-08-04
 - [[dartmouth-workshop]] — the 1956 meeting that coined "artificial intelligence" | added: 2026-08-04
 - [[international-planning-competition]] — the benchmark competition that made planning research empirical | added: 2026-08-04
+- [[sebastian-thrun]] — led the first team to finish the DARPA Grand Challenge, using A* to re-plan | added: 2026-08-16
+- [[darpa-grand-challenge]] — the self-driving competition that put A* in a real vehicle | added: 2026-08-16
+- [[jeff-orkin]] — brought planning into commercial game AI with *F.E.A.R.* | added: 2026-08-16
 - [[jorg-hoffmann]] — author of the recommended planning survey paper | added: 2026-08-10
 
 ### Planning history

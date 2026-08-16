@@ -50,7 +50,9 @@ illustrating this.
 - Drives the pruning rule in [[iterative-width-search]]
 - Computed over the atoms of a [[search-node]]'s state, as defined by [[state-space-modelling]]
 - Sensitive to the choice of factored representation, the same choice discussed generally in [[state-space-modelling]]
+- Refined into the heuristic-relative measure $w_h$ by [[best-first-width-search]]
 
 ## Sources
 
 - [[w02b-width-and-iterative-search]] — defines novelty, works two examples (a short trace, and a five-state novelty table), and states the $|F|+1$ true-duplicate convention
+- [[w03b-local-search-and-bfws]] — introduces $w_h$, in which novelty is computed only against previously generated states of equal heuristic value, and positions width-based exploration against the flat exploration of RL and MCTS

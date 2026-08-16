@@ -59,8 +59,10 @@ is why deeper problems force a move to [[depth-first-search]] or
 - Contrasted with [[depth-first-search]] (LIFO, deepest-first)
 - Subsumed by [[iterative-deepening-search]], which recovers BFS's guarantees with DFS's space bound
 - The pruned variant used in [[iterative-width-search]] is also breadth-first, restricted by novelty rather than depth
+- Used as the `improve` step inside [[enforced-hill-climbing]], where committing to the improving path is what bounds the memory cost
 
 ## Sources
 
 - [[w02-prerecorded-search-fundamentals]] — introduces shallowest-first expansion and poses completeness/optimality as open questions
 - [[w02a-blind-search-properties]] — resolves completeness (yes, given connectedness) and optimality (only under uniform cost), derives $O(b^d)$ complexity, and covers the generation-versus-expansion goal-test detail
+- [[w03b-local-search-and-bfws]] — its space problem as the reason enforced hill-climbing discards each generated layer after committing

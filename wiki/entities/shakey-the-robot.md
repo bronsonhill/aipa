@@ -31,3 +31,4 @@ demonstrated with Roman numeral multiplication.
 ## Sources
 
 - [[w01b-introduction-to-planning]] — the opening film and the survival question
+- [[w03a-heuristic-functions-properties]] — [[a-star-search]] was invented in the 1970s by the Shakey researchers, from problems they had failed to solve on the project

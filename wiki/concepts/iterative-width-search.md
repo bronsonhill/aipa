@@ -74,7 +74,10 @@ lecture.
 - Bounds the exponential worst case implied by [[planning-complexity]] whenever a problem's width is small
 - SIW addresses the same conjunctive-goal problem that motivates [[satisficing-and-optimal-planning]]'s satisficing track
 - Representation sensitivity connects directly to [[state-space-modelling]]
+- The best-first variant, ordering on novelty with heuristic tie-breaking, is [[best-first-width-search]]
+- Applied to black-box transition functions in [[planning-with-simulators]], on the [[arcade-learning-environment]]
 
 ## Sources
 
 - [[w02b-width-and-iterative-search]] — defines IW(k), width, SIW, the Sokoban counterexample, empirical results, and the grid-representation exercise
+- [[w03b-local-search-and-bfws]] — the Atari setup in detail (128 RAM bytes as variables, 589,824 states per lookahead, random child order, $\gamma = 0.995$) and the 54-game comparison against 2BFS, BrFS and UCT

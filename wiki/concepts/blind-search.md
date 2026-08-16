@@ -60,9 +60,12 @@ distinction.
 - Contrasted with heuristic search, part of [[search-and-inference]]
 - Pruned by novelty in [[iterative-width-search]], which restricts which blind-search-generated states survive
 - Discussed alongside [[satisficing-and-optimal-planning]]
+- Contains uniform-cost search (Dijkstra's algorithm), recovered as the $W = 0$ case of [[weighted-a-star]]
+- The informed counterpart, taking a [[heuristic-function]] rather than none, is [[greedy-best-first-search]]
 
 ## Sources
 
 - [[w02-prerecorded-search-fundamentals]] — the blind-versus-informed pros/cons framing, and the four evaluation properties
 - [[w02a-blind-search-properties]] — works out completeness, optimality, and complexity for each blind search algorithm in detail
 - [[w01-prerecorded-ai-overview]] — video 7 states the systematic/local and blind/heuristic distinctions and their relative empirical performance
+- [[w03-prerecorded-heuristic-search]] — identifies $h = 0$ everywhere as the blind heuristic, and $W = 0$ weighted A\* as Dijkstra's algorithm
