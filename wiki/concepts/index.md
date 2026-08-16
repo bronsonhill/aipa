@@ -23,6 +23,20 @@ Index of core concepts and theory in AI planning for autonomy.
 - [[theories-as-programs]] — the 1960s to 80s methodology and why it could not be falsified | added: 2026-08-04
 - [[search-and-inference]] — the two ingredients of every solver, and how structure is exploited | added: 2026-08-04
 
+### Heuristic search
+
+- [[heuristic-function]] — estimating remaining cost; informedness against evaluation cost | added: 2026-08-16
+- [[heuristic-properties]] — safe, goal-aware, admissible, consistent, and which guarantee each buys | added: 2026-08-16
+- [[greedy-best-first-search]] — order on $h$ alone; complete if safe, never guaranteed optimal | added: 2026-08-16
+- [[a-star-search]] — order on $f = g + h$; optimal when the heuristic is admissible | added: 2026-08-16
+- [[weighted-a-star]] — $g + W\cdot h$ as a dial from Dijkstra through A* to greedy, with a suboptimality bound | added: 2026-08-16
+- [[ida-star]] — iterative deepening on an $f$-limit; A*'s optimality with linear space | added: 2026-08-16
+- [[local-search]] — commit and forget; small memory, no guarantees | added: 2026-08-16
+- [[hill-climbing]] — discrete gradient descent, and the four structures that defeat it | added: 2026-08-16
+- [[enforced-hill-climbing]] — breadth-first search to a better $h$, then commit; the pre-2012 workhorse | added: 2026-08-16
+- [[best-first-width-search]] — novelty first, heuristic as tie-break; IPC's best satisficing planner since 2018 | added: 2026-08-16
+- [[planning-with-simulators]] — when the model fits but the language does not; black-box transitions | added: 2026-08-16
+
 ### Modelling and languages
 
 - [[closed-world-assumption]] — anything not in `:init` is false, and why that applies to the initial state only | added: 2026-08-04

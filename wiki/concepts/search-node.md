@@ -54,9 +54,11 @@ generated before any of them is tested.
 - Underlies [[blind-search]], [[breadth-first-search]], [[depth-first-search]], [[iterative-deepening-search]]
 - The state a node wraps is defined by [[state-space-modelling]]
 - Novelty, used by [[iterative-width-search]], is a further property computed over the atoms of a node's state
+- The $g$ value a node records is what [[a-star-search]] adds to a [[heuristic-function]] estimate to form $f$
 
 ## Sources
 
 - [[w02-prerecorded-search-fundamentals]] — defines the search node, $g(n)$, $g^*(n)$, node expansion, search strategy, open list, and closed list
 - [[w01-prerecorded-ai-overview]] — video 8 introduces the same terminology
 - [[w02a-blind-search-properties]] — applies the vocabulary to derive BFS/DFS complexity, including the generation-versus-expansion goal-test distinction
+- [[w03b-local-search-and-bfws]] — distinguishes world states, search states (identical to world states under progression, sub-goals under regression), and search nodes as a search state plus how it was reached

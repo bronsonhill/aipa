@@ -50,7 +50,9 @@ produced [[shakey-the-robot|Shakey]]-adjacent planning work.
 - Built from [[depth-first-search]], recovering the guarantees of [[breadth-first-search]]
 - A [[blind-search]] algorithm, expanded via [[search-node]]s
 - Contrasted with [[iterative-width-search]], which also runs an increasing-parameter sequence of bounded searches, but bounds novelty rather than depth
+- Extended by [[ida-star]], which replaces the depth limit with an $f$-value limit and recovers optimality under an admissible heuristic
 
 ## Sources
 
 - [[w02a-blind-search-properties]] — introduces the algorithm, its completeness/optimality argument, its $O(bm)$ space bound, and the historical notes on Rubik's Cube and 1970s search
+- [[w03-prerecorded-heuristic-search]] — derives IDA\* from it, and attributes the Rubik's Cube solution specifically to IDA\*

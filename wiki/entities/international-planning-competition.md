@@ -54,3 +54,4 @@ anything.
 - [[w01b-introduction-to-planning]] — competition history, winners by track, and the disclaimer on interpreting results
 - [[w01-prerecorded-ai-overview]] — video 3 explains benchmarks and competitions as the field's empirical methodology
 - [[w04-prerecorded-planning-complexity]] — gives the domain/instance/planner-count figures and restates the caveat on interpreting a given year's results as a general ranking
+- [[w03b-local-search-and-bfws]] — [[best-first-width-search]] variants have been the best performers in the agile and satisficing tracks since IPC-2018

@@ -34,3 +34,6 @@ incentive to outsource the learning.
 - [[w01a-introduction-to-ai]] — self-introduction, research areas, the AGI argument, and the subject's structure and assessment
 - [[w01-prerecorded-ai-overview]] — presenter of all six background videos
 - [[w01b-introduction-to-planning]] — presenter; the planning.domains editor is a tool from his group
+- [[w03-prerecorded-heuristic-search]] — presenter of all nine week 3 videos
+- [[w03a-heuristic-functions-properties]] — presenter; the A\* invention history and the heuristic-properties exercise
+- [[w03b-local-search-and-bfws]] — presenter; his group's width-based planning work on Atari, and the invitation to join it

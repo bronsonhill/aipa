@@ -98,3 +98,31 @@ existing week 1 pre-recorded source page.
 - **Entity pages covered:** strips, pddl, blocksworld
 - **Updated pages:** materials/index
 - **Notes:** week 2 content (blind search, search-node vocabulary, width-based search) was deliberately excluded, since it already has its own deck; every concept has at least 2 cards, and the state-model hierarchy and PDDL/STRIPS formalism each carry a contrast and a failure-mode card in addition to elaborative and mechanism cards.
+
+## [2026-08-16] ingest | Week 3 — heuristic search algorithms
+
+- **Source pages:** `wiki/sources/w03-prerecorded-heuristic-search.md`,
+  `wiki/sources/w03a-heuristic-functions-properties.md`,
+  `wiki/sources/w03b-local-search-and-bfws.md`
+- **New concept pages:** heuristic-function, heuristic-properties,
+  greedy-best-first-search, a-star-search, weighted-a-star, ida-star, local-search,
+  hill-climbing, enforced-hill-climbing, best-first-width-search,
+  planning-with-simulators
+- **New entity pages:** sebastian-thrun, darpa-grand-challenge,
+  arcade-learning-environment, lapkt, jeff-orkin
+- **Updated pages:** blind-search, breadth-first-search, iterative-deepening-search,
+  search-node, novelty, iterative-width-search, satisficing-and-optimal-planning,
+  shakey-the-robot, international-planning-competition, nir-lipovetzky, sources/index,
+  concepts/index, entities/index
+- **Notes:** the nine pre-lecture videos are public on YouTube, so the source page links
+  them directly rather than pointing at Canvas; the two live-lecture transcripts were
+  supplied as local files without recording links, so those pages carry the handbook
+  link as on w01/w02. Auto-captions for the eight available videos were pulled with
+  `yt-dlp` into a scratch directory outside the repo and not committed; captions for
+  video 1 (Heuristic Functions) were unavailable, and its content is covered by the
+  slides and the Monday live lecture instead. The slide deck is copyright course
+  material and was read for understanding only.
+
+## [2026-08-16] lint | post-ingest check
+
+- 78 pages scanned, 0 issues. Report: `wiki/lint-reports/2026-08-16.md`
