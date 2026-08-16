@@ -50,6 +50,131 @@ and its problem:
               (said_hello_to carol))))
 ```
 
+## Syntax
+
+### Notation basics
+
+PDDL is written in Lisp-style s-expressions: everything is a parenthesised list whose
+first element names the construct. Whitespace and line breaks are insignificant, `;`
+starts a comment running to end of line, and keywords begin with a colon (`:action`,
+`:init`). Identifiers are case-insensitive and conventionally lowercase, with `-` and
+`_` both allowed inside a name — though `-` is also the type-declaration separator, so
+`?x - block` and `?x-block` are different things and a missing space around the dash is
+a common parse error.
+
+The one distinction to internalise is **variable versus object**. A token starting with
+`?` is a variable, bound only within the action schema (or quantifier) that declares it;
+a bare token is an object name, declared in the problem file. This is the surface form
+of the [[lifted-representation]]: an action schema with variables is a template that a
+planner grounds into one action per legal substitution of objects for variables.
+
+### Domain file
+
+```lisp
+(define (domain <name>)
+  (:requirements ...)      ; language features used
+  (:types ...)             ; type names, optionally a hierarchy
+  (:constants ...)         ; objects shared by every problem in this domain
+  (:predicates ...)        ; the relations a state can record
+  (:functions ...)         ; numeric fluents (PDDL 2.1 and later)
+  (:action ...) ...)       ; one or more action schemas
+```
+
+Sections must appear in this order, and all but the name and at least one action are
+optional. Anything the domain uses beyond basic STRIPS has to be declared in
+`:requirements`, and a planner that does not support a listed requirement is expected to
+refuse the file rather than silently mis-solve it:
+
+| Requirement | Enables |
+|---|---|
+| `:strips` | conjunctive preconditions, add and delete effects — the base fragment |
+| `:typing` | the `- type` declarations on parameters and objects |
+| `:negative-preconditions` | `not` inside a precondition |
+| `:disjunctive-preconditions` | `or` inside a precondition |
+| `:equality` | the built-in `=` predicate for comparing objects |
+| `:universal-preconditions`, `:existential-preconditions` | `forall` and `exists` in preconditions |
+| `:conditional-effects` | `when` inside an effect |
+| `:fluents`, `:durative-actions` | numeric fluents and time (PDDL 2.1) |
+| `:adl` | shorthand for the quantified, disjunctive and conditional-effect set together |
+
+**Types.** `(:types block table)` declares two flat type names.
+`(:types block - object gripper - object)` declares a hierarchy, where `-` reads as "is
+a subtype of"; the implicit root type is `object`. Typing is a compactness device
+rather than an expressivity one — the same restrictions can be written as ordinary
+predicates in preconditions (`(is-block ?x)`), at the cost of verbosity.
+
+**Predicates.** `(:predicates (on ?x - block ?y - block) (clear ?x - block) (handempty))`
+declares the vocabulary of the state. A predicate applied to specific objects — `(on a b)`
+— is an *atom* or *fact*, and a state is exactly the set of atoms currently true. A
+zero-argument predicate such as `(handempty)` is a plain boolean. Predicate names may not
+collide with type or object names.
+
+**Action schemas.** The core construct:
+
+```lisp
+(:action stack
+  :parameters (?x - block ?y - block)
+  :precondition (and (holding ?x) (clear ?y))
+  :effect (and (not (holding ?x))
+               (not (clear ?y))
+               (clear ?x)
+               (on ?x ?y)
+               (handempty)))
+```
+
+`:parameters` declares the variables and their types. `:precondition` is a formula over
+those variables that must hold in a state for the action to be applicable there.
+`:effect` describes the successor state: a bare atom is an **add effect**, and an atom
+wrapped in `not` is a **delete effect**. Everything the effect does not mention is
+unchanged, which is PDDL's answer to the frame problem — a schema states only what it
+alters. Deletes are applied before adds where an atom appears in both.
+
+Preconditions are conjunctions by default; `and` may be omitted for a single atom.
+With the corresponding requirement declared they may also use `or`, `not`, `=`, and the
+quantifiers, which take the form `(forall (?b - block) (clear ?b))` and
+`(exists (?b - block) (on ?b a))`. Effects are more restricted: `or` is not permitted,
+since an effect must determine one successor state, but `forall` is allowed, and `when`
+gives a conditional effect, `(when (fragile ?x) (broken ?x))`, whose consequent applies
+only in states where the antecedent holds.
+
+A variable appearing in a precondition or effect must be bound — declared in
+`:parameters` or by an enclosing quantifier. An unbound `?x` is the other common parse
+error, and unlike a misspelled keyword it sometimes survives the parser and produces
+nonsense.
+
+### Problem file
+
+```lisp
+(define (problem blocks-3)
+  (:domain blocksworld)                      ; must match the domain's name exactly
+  (:objects a b c - block)
+  (:init (on-table a) (on-table b) (on c a)
+         (clear b) (clear c) (handempty))
+  (:goal (and (on a b) (on b c)))
+  (:metric minimize (total-cost)))           ; optional, PDDL 2.1 and later
+```
+
+`:objects` names the constants this instance quantifies over, with types when `:typing`
+is in force. `:init` is a flat list of ground atoms — no `and`, no variables, no
+negation — and it is exhaustive: anything not listed is false, which is the
+[[closed-world-assumption]]. Because it is exhaustive, forgetting `(handempty)` does not
+produce an error, it produces a different problem in which the gripper is mysteriously
+occupied.
+
+`:goal` is a formula rather than a list, so it takes `and` and, with the requirements
+declared, the same connectives a precondition may use. It describes a *set* of goal
+states, not one state: any state containing `(on a b)` and `(on b c)` satisfies the goal
+above, whatever else is true in it. `:metric` selects what an optimal planner minimises,
+most often action costs accumulated through `(increase (total-cost) 1)` effects; without
+it, plan length is the default measure.
+
+### Output
+
+A planner returns a plan as a sequence of ground actions, one per line, in the form
+`(stack a b)` — the schema name applied to the objects substituted for its parameters.
+That file is what [[val]] replays against the domain and problem to confirm each action's
+precondition held when it was taken and that the goal holds at the end.
+
 ## Lifecycle
 
 ```
@@ -78,3 +203,6 @@ benchmarks, competitions, and measurable progress.
 
 - [[w01b-introduction-to-planning]] — history, domain and problem anatomy, closed-world assumption, toolchain, parsers, and debugging
 - [[w01a-introduction-to-ai]] — flags PDDL modelling as assessed work in the first assignment
+
+The syntax reference above expands on the source material with standard PDDL 1.2/2.1
+language detail; the running example follows [[blocksworld]] as used in the subject.
