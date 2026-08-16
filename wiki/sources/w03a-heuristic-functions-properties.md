@@ -34,10 +34,12 @@ transition, the heuristic may not drop by more than the cost of the action taken
 poll-and-discuss exercise applies all four to a three-node graph with unit action
 costs, where the initial state has $h = 2$ but $h^* = 1$, a self-looping dead-end state
 has $h = 1$ but $h^* = \infty$, and the goal has $h = 0$. The class agreed on goal-aware
-but split on the rest; the resolution is that the heuristic is only goal-aware — it is
-unsafe because it reports a finite value at a genuine dead end, inadmissible because
-$2 > 1$ at the initial state, and inconsistent because $h$ drops by 2 across an
-action of cost 1.
+but split on the rest. The resolution: it is goal-aware; inadmissible, because $2 > 1$
+at the initial state; inconsistent, because $h$ drops by 2 across an action of cost 1;
+and safe, vacuously, since it never reports $\infty$ at all. That last verdict is the
+one the discussion was really about, because the intuitive answer is to call it unsafe
+for failing to flag the dead end, which reverses the implication. Asked to construct an
+unsafe version, the class arrived at setting $h = \infty$ at the initial state.
 
 The lecture also gives the argument for why a perfect heuristic is not the goal. Since
 planning is PSPACE-complete and therefore exponential on a deterministic machine,
@@ -87,6 +89,7 @@ to answer on Friday.
 - $h = 0$ everywhere as the blind heuristic; contrast with novelty as past-derived rather than future-derived information
 - Safe, goal-aware, admissible, consistent: definitions and the one-directional nature of safety
 - Worked three-node exercise applying all four properties, with the class poll and its resolution
+- Why the exercise's heuristic is vacuously safe, and what would have to change to make it unsafe
 - Greedy best-first search read line by line: open list as priority queue on $h$, closed list, successor generation
 - Which lines of the pseudocode carry the completeness and optimality arguments
 - Safety as sufficient for completeness of greedy best-first search
@@ -97,7 +100,7 @@ to answer on Friday.
 
 ## Notable claims / results
 
-- Safety is one-directional. A safe heuristic can be trusted when it reports $\infty$, but it is not a complete dead-end detector: it may report a finite value at a state with no solution.
+- Safety is one-directional. A safe heuristic can be trusted when it reports $\infty$, but it is not a complete dead-end detector: it may report a finite value at a state with no solution. A heuristic that never reports $\infty$ is therefore safe by default.
 - A safe heuristic is sufficient for greedy best-first search to be complete, because the only place the algorithm discards a branch is the infinite-$h$ test.
 - Greedy best-first search is not optimal even given the perfect heuristic $h^*$, because two goal states both receive $h = 0$ and tie-breaking, not cost, decides which is returned.
 - A\* expands every node whose $f$-value is at most the optimal solution cost $g^*$; therefore missing an optimal solution requires some state on every optimal path to have $f > g^*$.
@@ -109,3 +112,4 @@ to answer on Friday.
 - The A\* optimality proof is completed in [[w03b-local-search-and-bfws]], where admissibility turns out to be the required property.
 - The blind-heuristic contrast draws on [[novelty]] from [[w02b-width-and-iterative-search]].
 - The PSPACE argument comes from [[planning-complexity]], covered in [[w04-prerecorded-planning-complexity]].
+- Digested in [[w03-heuristic-search-digest]], alongside the pre-recorded videos and the Friday lecture.

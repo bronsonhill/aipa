@@ -54,10 +54,22 @@ state $D$ with a self-loop and $h = 1$, and a goal $G$ with $h = 0$, where $I$ h
 transitions to both $D$ and $G$. The true values are $h^*(I) = 1$,
 $h^*(D) = \infty$, $h^*(G) = 0$.
 
-This heuristic is goal-aware and nothing else. It is unsafe: it would only be safe if
-it reported $\infty$ at $D$, and it reports 1. It is inadmissible: $h(I) = 2 > 1 =
-h^*(I)$. It is inconsistent: across $I \to G$ the heuristic drops by 2 while the action
-costs 1.
+This heuristic is goal-aware, because $h(G) = 0$. It is inadmissible, because
+$h(I) = 2 > 1 = h^*(I)$; one violating state is enough. It is inconsistent, because
+across $I \to G$ the value drops by 2 while the action costs 1; one violating transition
+is enough.
+
+Safety is the one worth slowing down on. The heuristic never reports $\infty$, so the
+condition "$h^*(s) = \infty$ for all $s$ with $h(s) = \infty$" holds vacuously and the
+heuristic *is* safe. The tempting wrong answer is to call it unsafe because it fails to
+flag the dead end $D$, which reads the implication backwards. Safety constrains what
+$h$ may claim when it says $\infty$; it never obliges $h$ to say $\infty$ anywhere. To
+break safety here you would set $h(I) = \infty$, claiming no solution exists from a
+state where one does.
+
+The verdict is also a useful check on the implication diagram. Safe-but-inadmissible is
+consistent with "admissible $\Rightarrow$ safe" — the arrow only rules out the reverse
+combination, admissible-but-unsafe.
 
 ### What each property buys
 

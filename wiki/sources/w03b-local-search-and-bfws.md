@@ -149,3 +149,4 @@ search manages 0.3.
 - The Atari application extends the IW results already recorded on [[iterative-width-search]].
 - The model-versus-language argument refines [[models-and-solvers]] and the language coverage in [[w01b-introduction-to-planning]].
 - Automatically derived heuristics are flagged as the topic of the following two weeks.
+- Digested in [[w03-heuristic-search-digest]], alongside the pre-recorded videos and the Monday lecture.

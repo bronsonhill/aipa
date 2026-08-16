@@ -137,3 +137,4 @@ a self-driving car forty years later.
 - Resolved live in [[w03a-heuristic-functions-properties]] (heuristic properties, greedy best-first search, A\*) and [[w03b-local-search-and-bfws]] (weighted A\*, hill-climbing, enforced hill-climbing, BFWS).
 - IDA\* extends [[iterative-deepening-search]] from [[w02a-blind-search-properties]].
 - The $W = 0$ case restates the uniform-cost search named in [[w02a-blind-search-properties]].
+- Digested in [[w03-heuristic-search-digest]], which reproduces every pseudocode block and worked trace in reading order.

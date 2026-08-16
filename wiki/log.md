@@ -116,3 +116,17 @@ existing week 1 pre-recorded source page.
 ## [2026-08-16] lint | post-ingest check
 
 - 78 pages scanned, 0 issues. Report: `wiki/lint-reports/2026-08-16.md`
+
+## [2026-08-16] digest | w03 — heuristic search algorithms
+
+- **Material page:** `wiki/materials/w03-heuristic-search-digest.md`
+- **Sources digested:** w03-prerecorded-heuristic-search (9 videos, 58 min),
+  w03a-heuristic-functions-properties, w03b-local-search-and-bfws, plus the 57-slide deck
+- **Updated pages:** the three week 3 source pages (backlink to the digest), materials/index
+- **Notes:** every pseudocode block (GBFS, A*, WA*, HC, EHC improve) and both worked
+  examples (the three-node properties exercise, the slide 18 A* trace) are reproduced in
+  full rather than summarised. Video anchors are real caption timestamps; the two live
+  lectures have no public recording, so their sections carry slide ranges and a
+  `live lecture (Canvas)` marker instead of a link. Video 1 has no captions available, so
+  its section is reconstructed from the deck and the Monday lecture and the gap is noted
+  in the digest's open threads.
