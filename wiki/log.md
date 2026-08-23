@@ -130,3 +130,23 @@ existing week 1 pre-recorded source page.
   `live lecture (Canvas)` marker instead of a link. Video 1 has no captions available, so
   its section is reconstructed from the deck and the Monday lecture and the gap is noted
   in the digest's open threads.
+
+## [2026-08-23] cue-cards | Week 3 heuristic search deck
+
+- **Material page:** `wiki/materials/week-03-heuristic-search-cue-cards.md` (Obsidian Spaced Repetition format, 52 cards)
+- **Anki export:** `wiki/materials/week-03-heuristic-search-cue-cards.anki.tsv` (gitignored, regenerable)
+- **Concept pages covered:** heuristic-function, heuristic-properties,
+  greedy-best-first-search, a-star-search, weighted-a-star, ida-star, local-search,
+  hill-climbing, enforced-hill-climbing, best-first-width-search,
+  planning-with-simulators
+- **Source pages covered:** w03-prerecorded-heuristic-search,
+  w03a-heuristic-functions-properties, w03b-local-search-and-bfws, plus
+  w03-heuristic-search-digest
+- **Updated pages:** materials/index
+- **Notes:** written at pseudocode level per request — mechanism cards reproduce actual
+  control flow (FIFO versus priority queue, the `best-g` disjunct, the strict inequality
+  in EHC's `improve`), and the A* trace card reproduces the full slide-18 expansion.
+  Two cards target errors the lecturer named: reading the safety implication backwards,
+  and evaluating properties without first computing $h^*$. Week 4 material, helpful
+  actions/landmarks, and the width theory behind BFWS's guarantees are out of scope.
+  Tag convention `#card/cmas` inherited from the week 2 deck for filter compatibility.

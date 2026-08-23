@@ -10,3 +10,4 @@ Index of worked examples, notes, and derived study material.
 - [[reading-the-notation]] — key to angle-bracket tuples, set-builder notation, and the recurring symbols in the wiki's model definitions | added: 2026-08-05
 - [[week-02-search-cue-cards]] — 36 spaced-repetition cards on blind search, search-node vocabulary, novelty, and iterative width | added: 2026-08-10
 - [[w03-heuristic-search-digest]] — full-fidelity digest of week 3: heuristic properties, the GBFS/A*/WA*/HC/EHC/IDA* family, BFWS, and the Atari case study | added: 2026-08-16
+- [[week-03-heuristic-search-cue-cards]] — 52 spaced-repetition cards on heuristic properties, the six heuristic search algorithms, BFWS, and planning over simulators | added: 2026-08-23
