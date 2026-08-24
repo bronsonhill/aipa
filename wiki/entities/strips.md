@@ -55,6 +55,52 @@ Note that $\mathit{Pre}$ and $\mathit{Del}$ coincide here. That is the usual cas
 PDDL modelling and a useful mental check, though there are exceptions and it is a
 heuristic rather than a rule.
 
+## Mapping to PDDL
+
+The tuple is propositional: $F$ is a flat set of atoms and $O$ a flat set of operators,
+one per legal argument tuple, so five blocks means twenty-five `stack` operators written
+out by hand. [[pddl]] never asks for that. The conversion goes through a lifted
+intermediate — schemas plus objects — and the planner expands it back during grounding.
+
+| STRIPS | PDDL construct | File |
+|---|---|---|
+| $F$ | `(:predicates ...)` **and** `(:objects ...)` | domain + problem |
+| $O$ | `(:action ...)` schemas | domain |
+| $\mathit{Pre}(o)$ | `:precondition` | domain |
+| $\mathit{Add}(o)$ | bare atoms inside `:effect` | domain |
+| $\mathit{Del}(o)$ | atoms wrapped in `not` inside `:effect` | domain |
+| $I$ | `(:init ...)` | problem |
+| $G$ | `(:goal ...)` | problem |
+
+$F$ is the row that carries the idea. It has no single counterpart, because PDDL factors
+it: predicates supply the relation names and arities, objects supply the things, and $F$
+is the cross product the planner builds. `(on ?x - block ?y - block)` over objects
+`a b c` yields nine atoms and $2^9$ states without anyone typing either number. That
+factoring is the [[lifted-representation]].
+
+Two smaller differences. The add and delete lists are separate in the tuple and merged
+into one `:effect` conjunction in PDDL, with `not` marking the deletes — the semantics is
+still $(s \setminus \mathit{Del}) \cup \mathit{Add}$, which is why deletes apply before
+adds when an atom appears in both. And $I \subseteq F$ makes the [[closed-world-assumption]]
+invisible, a consequence of $I$ being a set; in a problem file the same assumption means
+an omitted atom produces a different problem rather than an error.
+
+`:types` and `:requirements` have no counterpart at all. Types abbreviate preconditions
+that could be written as ordinary predicates, requirements let a planner refuse a file it
+cannot handle, and neither adds expressivity.
+
+The worked `stack` table above converts with nothing left over (the lecture writes the
+gripper fact as $\mathrm{armEmpty}()$, the blocksworld domain on [[pddl]] as `handempty`;
+same atom):
+
+```lisp
+(:action stack
+  :parameters (?x - block ?y - block)
+  :precondition (and (holding ?x) (clear ?y))          ; Pre
+  :effect (and (not (holding ?x)) (not (clear ?y))     ; Del
+               (on ?x ?y) (handempty) (clear ?x)))     ; Add
+```
+
 ## Relevance to AI Planning for Autonomy
 
 STRIPS is the first language the subject teaches and the semantic core of everything

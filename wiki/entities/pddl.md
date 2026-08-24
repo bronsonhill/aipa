@@ -142,6 +142,33 @@ A variable appearing in a precondition or effect must be bound — declared in
 error, and unlike a misspelled keyword it sometimes survives the parser and produces
 nonsense.
 
+### Grounding
+
+A schema is a template, and a planner expands it into ground actions by taking a blind
+cross product over the parameter types. With five blocks, `stack` has $5 \times 5 = 25$
+ground instances, `(stack a a)` among them. Nothing about the schema rules that one out;
+grounding does not consult the state.
+
+Preconditions are what cut the product down, through the STRIPS applicability test
+$A(s) = \{o \mid \mathit{Pre}(o) \subseteq s\}$. In a state where the gripper holds `a`
+and only `b` is clear, `(holding ?x)` pins `?x` to `a`, `(clear ?y)` pins `?y` to `b`, and
+the remaining 24 instances fail the subset check. One action survives, and it survives
+because it was filtered rather than because anything computed it.
+
+Two habits follow. A **static predicate** — one no effect ever adds or deletes, listed
+once in `:init` — works as a lookup table when it appears in a precondition:
+`(gridsquare-connected ?from ?to ?d)` restricts `?to` to real neighbours of `?from`
+instead of every square on the map, and `=` plus a hand-written disjunction would be the
+alternative. And a variable that appears in the **effect** but is pinned by no
+precondition is free for the planner to bind however suits the search, which is a
+modelling bug in nearly every case where it occurs.
+
+Typing prunes before the product is built; preconditions prune after. The set of usable
+actions is the same either way, the amount of work is not — which is why a schema with
+one parameter more than it needs can multiply the grounded action count without
+constraining anything. The correspondence with the underlying tuple
+$\langle F, O, I, G \rangle$ is tabulated on [[strips]].
+
 ### Problem file
 
 ```lisp
