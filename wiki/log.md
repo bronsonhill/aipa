@@ -89,16 +89,6 @@ existing week 1 pre-recorded source page.
 - **Updated pages:** materials/index
 - **Notes:** week 1 and week 4 content (also in the wiki) was deliberately excluded from this deck's scope per the user's request; every algorithm (BFS/DFS/IDS/IW/SIW) has both a mechanism card and at least one contrast/failure-mode card.
 
-## [2026-08-11] cue-cards | Week 1 foundations deck
-
-- **Material page:** `wiki/materials/week-01-foundations-cue-cards.md` (Obsidian Spaced Repetition format, 37 cards)
-- **Anki export:** not generated in this session (the `to_anki_tsv.py` converter from the `wiki-skills` plugin was not available locally); regenerate with the `cue-cards` skill when running with the plugin installed.
-- **Source pages covered:** w01-prerecorded-ai-overview, w01a-introduction-to-ai, w01b-introduction-to-planning
-- **Concept pages covered:** rational-agent, turing-test, control-problem, classical-planning, models-and-solvers, theories-as-programs, search-and-inference, boolean-satisfiability, constraint-satisfaction-problem, conformant-planning, markov-decision-process, partially-observable-mdp, closed-world-assumption, lifted-representation, planning-complexity, plan-validation
-- **Entity pages covered:** strips, pddl, blocksworld
-- **Updated pages:** materials/index
-- **Notes:** week 2 content (blind search, search-node vocabulary, width-based search) was deliberately excluded, since it already has its own deck; every concept has at least 2 cards, and the state-model hierarchy and PDDL/STRIPS formalism each carry a contrast and a failure-mode card in addition to elaborative and mechanism cards.
-
 ## [2026-08-16] ingest | Week 3 — heuristic search algorithms
 
 - **Source pages:** `wiki/sources/w03-prerecorded-heuristic-search.md`,
@@ -126,3 +116,37 @@ existing week 1 pre-recorded source page.
 ## [2026-08-16] lint | post-ingest check
 
 - 78 pages scanned, 0 issues. Report: `wiki/lint-reports/2026-08-16.md`
+
+## [2026-08-16] digest | w03 — heuristic search algorithms
+
+- **Material page:** `wiki/materials/w03-heuristic-search-digest.md`
+- **Sources digested:** w03-prerecorded-heuristic-search (9 videos, 58 min),
+  w03a-heuristic-functions-properties, w03b-local-search-and-bfws, plus the 57-slide deck
+- **Updated pages:** the three week 3 source pages (backlink to the digest), materials/index
+- **Notes:** every pseudocode block (GBFS, A*, WA*, HC, EHC improve) and both worked
+  examples (the three-node properties exercise, the slide 18 A* trace) are reproduced in
+  full rather than summarised. Video anchors are real caption timestamps; the two live
+  lectures have no public recording, so their sections carry slide ranges and a
+  `live lecture (Canvas)` marker instead of a link. Video 1 has no captions available, so
+  its section is reconstructed from the deck and the Monday lecture and the gap is noted
+  in the digest's open threads.
+
+## [2026-08-23] cue-cards | Week 3 heuristic search deck
+
+- **Material page:** `wiki/materials/week-03-heuristic-search-cue-cards.md` (Obsidian Spaced Repetition format, 52 cards)
+- **Anki export:** `wiki/materials/week-03-heuristic-search-cue-cards.anki.tsv` (gitignored, regenerable)
+- **Concept pages covered:** heuristic-function, heuristic-properties,
+  greedy-best-first-search, a-star-search, weighted-a-star, ida-star, local-search,
+  hill-climbing, enforced-hill-climbing, best-first-width-search,
+  planning-with-simulators
+- **Source pages covered:** w03-prerecorded-heuristic-search,
+  w03a-heuristic-functions-properties, w03b-local-search-and-bfws, plus
+  w03-heuristic-search-digest
+- **Updated pages:** materials/index
+- **Notes:** written at pseudocode level per request — mechanism cards reproduce actual
+  control flow (FIFO versus priority queue, the `best-g` disjunct, the strict inequality
+  in EHC's `improve`), and the A* trace card reproduces the full slide-18 expansion.
+  Two cards target errors the lecturer named: reading the safety implication backwards,
+  and evaluating properties without first computing $h^*$. Week 4 material, helpful
+  actions/landmarks, and the width theory behind BFWS's guarantees are out of scope.
+  Tag convention `#card/cmas` inherited from the week 2 deck for filter compatibility.
