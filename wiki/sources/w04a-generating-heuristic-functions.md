@@ -96,6 +96,7 @@ delete relaxation, covered "much better" in the next lecture, is flagged as the 
 
 ## Connections
 
+- Digested in full alongside the pre-recorded videos and L5 in [[w04-relaxation-and-delete-relaxation-digest]].
 - Formalises the informal relaxation examples from [[w04-prerecorded-relaxation-heuristics]].
 - Extends [[heuristic-function]] with a concrete, general construction method rather than a hand-designed heuristic.
 - Sets up [[w04b-delete-relaxation-heuristics]], which the lecture explicitly promises will produce "much better" heuristic functions than goal counting.

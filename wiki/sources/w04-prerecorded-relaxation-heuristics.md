@@ -128,6 +128,7 @@ formally in week 5.
 
 ## Connections
 
+- Digested in full alongside the two live lectures in [[w04-relaxation-and-delete-relaxation-digest]].
 - Precedes and is developed formally in [[w04a-generating-heuristic-functions]] (relaxation) and [[w04b-delete-relaxation-heuristics]] (delete relaxation, $h^+$, $h^\text{add}$, $h^\text{max}$, relaxed plans).
 - Extends [[heuristic-function]] and [[planning-complexity]] with a concrete method for deriving heuristics automatically.
 - The NP-hardness of relaxed optimal planning echoes the PSPACE-hardness of full planning covered in [[w04-prerecorded-planning-complexity]].

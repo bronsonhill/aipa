@@ -180,3 +180,19 @@ existing week 1 pre-recorded source page.
   unrelated orphan, `materials/week-01-foundations-cue-cards`. None originate from
   today's week 4 ingest, and none of today's new or updated pages appear in the
   report.
+
+## [2026-08-24] digest | w04 — relaxation and delete relaxation heuristics
+
+- **Material page:** `wiki/materials/w04-relaxation-and-delete-relaxation-digest.md`
+- **Source pages covered:** w04-prerecorded-relaxation-heuristics,
+  w04a-generating-heuristic-functions, w04b-delete-relaxation-heuristics
+- **Updated pages:** materials/index, and the three w04 source pages (cross-linked
+  back to the digest)
+- **Notes:** full-fidelity spine reproducing every formal definition, proposition, and
+  proof sketch from both slide decks (relaxation triple, state dominance, greedy
+  relaxed planning, $h^+$'s NP-completeness reduction from SAT, the $h^\text{max}$/
+  $h^\text{add}$ recursive equations, best-supporter closedness/well-foundedness proof,
+  relaxed plan extraction correctness proof) plus transcript-only intuitions marked
+  `[!mic]` (the "useless action" trace, the one-directional relaxed-plan bound, the tip
+  given ahead of the 8-puzzle exercise, and the FF-paper attribution footnote). Landmarks
+  and abstractions are flagged as open threads, out of scope for this course.

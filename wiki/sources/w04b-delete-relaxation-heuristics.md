@@ -150,6 +150,7 @@ conjunctions to interpolate between $h^+$ and $h^*$.
 
 ## Connections
 
+- Digested in full alongside the pre-recorded videos and L4 in [[w04-relaxation-and-delete-relaxation-digest]].
 - Directly formalises the delete-relaxation preview in [[w04-prerecorded-relaxation-heuristics]] and its state-dominance argument.
 - Extends the relaxation framework from [[w04a-generating-heuristic-functions]] with a specific, widely-used relaxation and its own admissibility proof.
 - Sets up [[best-first-width-search]] (BFWS, the following lecture's topic), listed here as using a variant of $h^\text{FF}$ alongside novelty and goal counting.
