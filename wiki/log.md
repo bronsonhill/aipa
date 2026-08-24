@@ -196,3 +196,22 @@ existing week 1 pre-recorded source page.
   `[!mic]` (the "useless action" trace, the one-directional relaxed-plan bound, the tip
   given ahead of the 8-puzzle exercise, and the FF-paper attribution footnote). Landmarks
   and abstractions are flagged as open threads, out of scope for this course.
+
+## [2026-08-24] cue-cards | Week 4 relaxation and delete relaxation deck
+
+- **Material page:** `wiki/materials/w04-relaxation-heuristics-cue-cards.md` (Obsidian Spaced Repetition format, 24 cards)
+- **Anki export:** `wiki/materials/w04-relaxation-heuristics-cue-cards.anki.tsv` (gitignored, regenerable)
+- **Concept pages covered:** relaxation, goal-counting-heuristic, delete-relaxation,
+  max-heuristic, additive-heuristic, relaxed-plan-heuristic, helpful-actions
+- **Source pages covered:** w04-prerecorded-relaxation-heuristics,
+  w04a-generating-heuristic-functions, w04b-delete-relaxation-heuristics, plus
+  w04-relaxation-and-delete-relaxation-digest
+- **Updated pages:** materials/index
+- **Notes:** written at the user's request for a good mix of technical and conceptual
+  coverage — mechanism cards reproduce actual formal content (the $a^+$ definition,
+  the greedy relaxed planning loop, the $h^\text{add}$ recursion, the SAT-to-PlanOpt⁺
+  reduction, relaxed plan extraction, the $bs^\text{max}$ well-foundedness proof
+  sketch) alongside elaborative-interrogation, contrast, and failure-mode cards on
+  why relaxation and admissibility hold and what breaks without them. The unanswered
+  8-puzzle relaxation exercise and the out-of-scope landmarks/abstractions families
+  are deliberately excluded. Tag convention `#card/cmas` inherited from prior decks.
