@@ -19,8 +19,11 @@ introduction to what planning research is and why it matters.
 ## Relevance to AI Planning for Autonomy
 
 Named as recommended supplementary reading alongside the week 4 material on
-computational approaches to planning.
+computational approaches to planning, and again as author of the FF paper — the
+JAIR Best Paper Award winner that introduced the [[relaxed-plan-heuristic]]
+($h^\text{FF}$), helpful actions, and enforced hill-climbing.
 
 ## Sources
 
 - [[w04-prerecorded-planning-complexity]] — recommends Hoffmann's survey paper as further reading
+- [[w04b-delete-relaxation-heuristics]] — recommends the FF paper, main reference for the relaxed-plan heuristic

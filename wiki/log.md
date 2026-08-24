@@ -150,3 +150,68 @@ existing week 1 pre-recorded source page.
   and evaluating properties without first computing $h^*$. Week 4 material, helpful
   actions/landmarks, and the width theory behind BFWS's guarantees are out of scope.
   Tag convention `#card/cmas` inherited from the week 2 deck for filter compatibility.
+
+## [2026-08-24] ingest | Week 4 — relaxation and delete relaxation heuristics
+
+- **Source pages:** `wiki/sources/w04-prerecorded-relaxation-heuristics.md`,
+  `wiki/sources/w04a-generating-heuristic-functions.md`,
+  `wiki/sources/w04b-delete-relaxation-heuristics.md`
+- **New concept pages:** relaxation, goal-counting-heuristic, delete-relaxation,
+  max-heuristic, additive-heuristic, relaxed-plan-heuristic, helpful-actions
+- **New entity pages:** bylander-complexity-result
+- **Updated pages:** heuristic-function, heuristic-properties, enforced-hill-climbing,
+  best-first-width-search, general-problem-solver, jorg-hoffmann, nir-lipovetzky,
+  w04-prerecorded-planning-complexity, sources/index, concepts/index, entities/index
+- **Notes:** two lecture slide decks (L4 "Generating Heuristic Functions", L5 "Delete
+  Relaxation Heuristics") plus nine pre-recorded YouTube videos, fetched via
+  auto-captions to a scratch directory outside the repo per `source_policy: link-only`.
+  L5's remaining unfetched slide range (pages 21, 30, 41) covers a live quiz and a
+  second Bellman-Ford worked table, both redundant with material already summarised
+  from adjacent pages. Landmarks and abstractions (the other two relaxation families)
+  are explicitly out of scope for this course per the lecture and left unwritten.
+
+## [2026-08-24] lint
+
+- **Report:** `wiki/lint-reports/2026-08-24.md`
+- **Issues found:** 20 (10 orphan pages, 10 matching index-drift entries)
+- **Notes:** all 20 are pre-existing untracked " 2.md" duplicate files (stray copies of
+  a-star-search, heuristic-function, hill-climbing, ida-star, local-search,
+  weighted-a-star, jeff-orkin, lapkt, w03-prerecorded-heuristic-search) plus one
+  unrelated orphan, `materials/week-01-foundations-cue-cards`. None originate from
+  today's week 4 ingest, and none of today's new or updated pages appear in the
+  report.
+
+## [2026-08-24] digest | w04 — relaxation and delete relaxation heuristics
+
+- **Material page:** `wiki/materials/w04-relaxation-and-delete-relaxation-digest.md`
+- **Source pages covered:** w04-prerecorded-relaxation-heuristics,
+  w04a-generating-heuristic-functions, w04b-delete-relaxation-heuristics
+- **Updated pages:** materials/index, and the three w04 source pages (cross-linked
+  back to the digest)
+- **Notes:** full-fidelity spine reproducing every formal definition, proposition, and
+  proof sketch from both slide decks (relaxation triple, state dominance, greedy
+  relaxed planning, $h^+$'s NP-completeness reduction from SAT, the $h^\text{max}$/
+  $h^\text{add}$ recursive equations, best-supporter closedness/well-foundedness proof,
+  relaxed plan extraction correctness proof) plus transcript-only intuitions marked
+  `[!mic]` (the "useless action" trace, the one-directional relaxed-plan bound, the tip
+  given ahead of the 8-puzzle exercise, and the FF-paper attribution footnote). Landmarks
+  and abstractions are flagged as open threads, out of scope for this course.
+
+## [2026-08-24] cue-cards | Week 4 relaxation and delete relaxation deck
+
+- **Material page:** `wiki/materials/w04-relaxation-heuristics-cue-cards.md` (Obsidian Spaced Repetition format, 24 cards)
+- **Anki export:** `wiki/materials/w04-relaxation-heuristics-cue-cards.anki.tsv` (gitignored, regenerable)
+- **Concept pages covered:** relaxation, goal-counting-heuristic, delete-relaxation,
+  max-heuristic, additive-heuristic, relaxed-plan-heuristic, helpful-actions
+- **Source pages covered:** w04-prerecorded-relaxation-heuristics,
+  w04a-generating-heuristic-functions, w04b-delete-relaxation-heuristics, plus
+  w04-relaxation-and-delete-relaxation-digest
+- **Updated pages:** materials/index
+- **Notes:** written at the user's request for a good mix of technical and conceptual
+  coverage — mechanism cards reproduce actual formal content (the $a^+$ definition,
+  the greedy relaxed planning loop, the $h^\text{add}$ recursion, the SAT-to-PlanOpt⁺
+  reduction, relaxed plan extraction, the $bs^\text{max}$ well-foundedness proof
+  sketch) alongside elaborative-interrogation, contrast, and failure-mode cards on
+  why relaxation and admissibility hold and what breaks without them. The unanswered
+  8-puzzle relaxation exercise and the out-of-scope landmarks/abstractions families
+  are deliberately excluded. Tag convention `#card/cmas` inherited from prior decks.

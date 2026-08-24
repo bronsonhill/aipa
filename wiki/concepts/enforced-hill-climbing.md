@@ -68,8 +68,10 @@ search and the reach of systematic search, in the proportion the problem needs.
 
 - Combines [[hill-climbing]] with [[breadth-first-search]]; a hybrid within [[local-search]]
 - Shares hill-climbing's failure modes and its need for $h(s) > 0$ at non-goal states, see [[heuristic-properties]]
+- Used by the FF planner restricted to [[helpful-actions]] rather than the full successor set, trading completeness for speed
 
 ## Sources
 
 - [[w03-prerecorded-heuristic-search]] — the `improve` procedure traced pictorially, and the local/systematic mix
 - [[w03b-local-search-and-bfws]] — memory behaviour, escaping local minima, and the identical guarantees to hill-climbing
+- [[w04b-delete-relaxation-heuristics]] — FF's restriction of enforced hill-climbing to helpful actions

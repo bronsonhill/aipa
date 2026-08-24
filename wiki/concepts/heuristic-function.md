@@ -62,8 +62,10 @@ changes and nobody is there to rewrite it.
 - Consumed by [[greedy-best-first-search]], [[a-star-search]], [[weighted-a-star]], [[hill-climbing]], [[enforced-hill-climbing]], [[ida-star]]
 - Contrasted with [[novelty]], which derives its ordering from the search's past rather than an estimate of its future
 - Absent (equivalently, constant) in [[blind-search]]
+- Generated automatically by [[relaxation]], rather than hand-designed, in every heuristic covered from week 4 onward: [[goal-counting-heuristic]], [[max-heuristic]], [[additive-heuristic]], [[relaxed-plan-heuristic]]
 
 ## Sources
 
 - [[w03-prerecorded-heuristic-search]] — formal definition, $h^*$, informedness, and the cost trade-off
 - [[w03a-heuristic-functions-properties]] — the PSPACE argument against using $h^*$, and $h = 0$ as the blind heuristic
+- [[w04a-generating-heuristic-functions]] — relaxation as the general method for deriving $h$ automatically from a problem description

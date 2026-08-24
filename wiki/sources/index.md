@@ -28,3 +28,6 @@ Index of external learning resources. Because course materials are copyright, no
 ### Week 4
 
 - [[w04-prerecorded-planning-complexity]] — two videos on PSPACE-completeness and the history of planning's computational approaches | added: 2026-08-10
+- [[w04-prerecorded-relaxation-heuristics]] — nine videos on the relaxation methodology, goal counting, and a delete-relaxation preview | added: 2026-08-24
+- [[w04a-generating-heuristic-functions]] — live lecture: relaxation formalised, native/constructible/computable, and how it plugs into search | added: 2026-08-24
+- [[w04b-delete-relaxation-heuristics]] — live lecture: delete relaxation, $h^+$, $h^\text{max}$, $h^\text{add}$, relaxed plans, $h^\text{FF}$, helpful actions | added: 2026-08-24

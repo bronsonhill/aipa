@@ -27,6 +27,13 @@ Index of core concepts and theory in AI planning for autonomy.
 
 - [[heuristic-function]] — estimating remaining cost; informedness against evaluation cost | added: 2026-08-16
 - [[heuristic-properties]] — safe, goal-aware, admissible, consistent, and which guarantee each buys | added: 2026-08-16
+- [[relaxation]] — simplify the problem, solve it, use that cost as the heuristic | added: 2026-08-24
+- [[goal-counting-heuristic]] — count unmet goals; the simplest relaxation, and its limits | added: 2026-08-24
+- [[delete-relaxation]] — drop delete effects; "what was once true remains true forever" | added: 2026-08-24
+- [[max-heuristic]] — admissible but uninformative approximation of $h^+$ via max over sub-goals | added: 2026-08-24
+- [[additive-heuristic]] — inadmissible but informative approximation of $h^+$ via sum over sub-goals | added: 2026-08-24
+- [[relaxed-plan-heuristic]] — extract one relaxed plan by backward-chaining; avoids most over-counting | added: 2026-08-24
+- [[helpful-actions]] — applicable actions that also appear in the extracted relaxed plan | added: 2026-08-24
 - [[greedy-best-first-search]] — order on $h$ alone; complete if safe, never guaranteed optimal | added: 2026-08-16
 - [[a-star-search]] — order on $f = g + h$; optimal when the heuristic is admissible | added: 2026-08-16
 - [[weighted-a-star]] — $g + W\cdot h$ as a dial from Dijkstra through A* to greedy, with a suboptimality bound | added: 2026-08-16

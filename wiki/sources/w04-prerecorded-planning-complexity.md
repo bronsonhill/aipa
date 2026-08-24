@@ -119,3 +119,4 @@ and rules, not a general ranking of planners.
 - Provides the complexity-theoretic and historical grounding behind [[w02b-width-and-iterative-search]], where width-based search is motivated as exploiting exactly the kind of structure this video says heuristic search planning made tractable.
 - Extends [[planning-complexity]] and [[blocksworld]], both first introduced in [[w01b-introduction-to-planning]].
 - The empirical methodology matches [[w01-prerecorded-ai-overview]] and the [[international-planning-competition]].
+- The 1996 result on automatically extracted heuristics is what [[w04-prerecorded-relaxation-heuristics]] and [[w04a-generating-heuristic-functions]] work through mechanically via [[relaxation]]; the NP-hardness of the relaxed goal-counting problem parallels the NP-completeness result for $\mathrm{PlanOpt}^+$ in [[w04b-delete-relaxation-heuristics]].

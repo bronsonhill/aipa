@@ -41,3 +41,4 @@ Index of people, models, tools, papers, and software relevant to AI Planning for
 ### Planning history
 
 - [[general-problem-solver]] — Newell and Simon's early planner; means-ends analysis and regression | added: 2026-08-10
+- [[bylander-complexity-result]] — classifies which restricted STRIPS fragments stay polynomial vs. NP-hard | added: 2026-08-24
