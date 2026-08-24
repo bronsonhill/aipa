@@ -62,8 +62,12 @@ been the best performers in the agile and satisficing tracks of the
 - Built on [[novelty]], refining it into the heuristic-relative measure $w_h$
 - The best-first cousin of [[iterative-width-search]]
 - Replaces [[greedy-best-first-search]] in state-of-the-art satisficing planners; consumes a [[heuristic-function]]
+- $h$ in the tie-break is [[additive-heuristic]] or a variant of the
+  [[relaxed-plan-heuristic]] ($h_\text{add}$/$h_\text{ff}$), both from
+  [[delete-relaxation]]
 - Implemented in [[lapkt]]
 
 ## Sources
 
 - [[w03b-local-search-and-bfws]] — the BFWS($f$) definition, the $w_h$ measure, the exploration/exploitation motivation, and the IPC results
+- [[w04b-delete-relaxation-heuristics]] — names BFWS's search control as novelty plus a variant of $h^\text{FF}$ plus goal counting

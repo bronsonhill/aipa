@@ -103,9 +103,13 @@ the properties are what turned that from experience into proof.
 - Properties of a [[heuristic-function]]
 - Determine the guarantees of [[a-star-search]], [[greedy-best-first-search]], [[weighted-a-star]], [[ida-star]]
 - The dead-end discussion connects to the failure modes of [[hill-climbing]]
+- Splits the week 4 relaxation heuristics along admissibility: [[max-heuristic]] and
+  $h^+$ (see [[delete-relaxation]]) are admissible, while [[additive-heuristic]] and
+  the [[relaxed-plan-heuristic]] are not, despite usually being more informative
 
 ## Sources
 
 - [[w03-prerecorded-heuristic-search]] — the four definitions and the implications between them
 - [[w03a-heuristic-functions-properties]] — the three-node exercise, safety's one-directionality, and greedy best-first search's non-optimality under $h^*$
 - [[w03b-local-search-and-bfws]] — completes the argument that admissibility is what makes A\* optimal
+- [[w04b-delete-relaxation-heuristics]] — worked examples of admissible ($h^\text{max}$) versus inadmissible ($h^\text{add}$, $h^\text{FF}$) relaxation heuristics

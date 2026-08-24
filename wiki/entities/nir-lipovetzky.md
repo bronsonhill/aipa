@@ -37,3 +37,6 @@ incentive to outsource the learning.
 - [[w03-prerecorded-heuristic-search]] — presenter of all nine week 3 videos
 - [[w03a-heuristic-functions-properties]] — presenter; the A\* invention history and the heuristic-properties exercise
 - [[w03b-local-search-and-bfws]] — presenter; his group's width-based planning work on Atari, and the invitation to join it
+- [[w04-prerecorded-relaxation-heuristics]] — presenter of all nine week 4 pre-recorded videos
+- [[w04a-generating-heuristic-functions]] — presenter; formalises the relaxation methodology
+- [[w04b-delete-relaxation-heuristics]] — presenter; formalises delete relaxation, $h^+$, $h^\text{max}$, $h^\text{add}$, $h^\text{FF}$; co-author of BFWS, named in the example-systems table

@@ -150,3 +150,33 @@ existing week 1 pre-recorded source page.
   and evaluating properties without first computing $h^*$. Week 4 material, helpful
   actions/landmarks, and the width theory behind BFWS's guarantees are out of scope.
   Tag convention `#card/cmas` inherited from the week 2 deck for filter compatibility.
+
+## [2026-08-24] ingest | Week 4 — relaxation and delete relaxation heuristics
+
+- **Source pages:** `wiki/sources/w04-prerecorded-relaxation-heuristics.md`,
+  `wiki/sources/w04a-generating-heuristic-functions.md`,
+  `wiki/sources/w04b-delete-relaxation-heuristics.md`
+- **New concept pages:** relaxation, goal-counting-heuristic, delete-relaxation,
+  max-heuristic, additive-heuristic, relaxed-plan-heuristic, helpful-actions
+- **New entity pages:** bylander-complexity-result
+- **Updated pages:** heuristic-function, heuristic-properties, enforced-hill-climbing,
+  best-first-width-search, general-problem-solver, jorg-hoffmann, nir-lipovetzky,
+  w04-prerecorded-planning-complexity, sources/index, concepts/index, entities/index
+- **Notes:** two lecture slide decks (L4 "Generating Heuristic Functions", L5 "Delete
+  Relaxation Heuristics") plus nine pre-recorded YouTube videos, fetched via
+  auto-captions to a scratch directory outside the repo per `source_policy: link-only`.
+  L5's remaining unfetched slide range (pages 21, 30, 41) covers a live quiz and a
+  second Bellman-Ford worked table, both redundant with material already summarised
+  from adjacent pages. Landmarks and abstractions (the other two relaxation families)
+  are explicitly out of scope for this course per the lecture and left unwritten.
+
+## [2026-08-24] lint
+
+- **Report:** `wiki/lint-reports/2026-08-24.md`
+- **Issues found:** 20 (10 orphan pages, 10 matching index-drift entries)
+- **Notes:** all 20 are pre-existing untracked " 2.md" duplicate files (stray copies of
+  a-star-search, heuristic-function, hill-climbing, ida-star, local-search,
+  weighted-a-star, jeff-orkin, lapkt, w03-prerecorded-heuristic-search) plus one
+  unrelated orphan, `materials/week-01-foundations-cue-cards`. None originate from
+  today's week 4 ingest, and none of today's new or updated pages appear in the
+  report.

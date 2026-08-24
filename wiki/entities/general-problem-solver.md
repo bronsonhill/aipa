@@ -16,7 +16,7 @@ research into the 1980s.
 ## Key facts
 
 - Newell and Simon are also associated with the founding of AI as a field; GPS predates the STRIPS/[[shakey-the-robot]] work by name but shares its representational assumptions.
-- Uses means-ends analysis: an early form of goal-counting heuristic, comparing the current state to the goal and selecting actions that reduce the difference.
+- Uses means-ends analysis: an early form of [[goal-counting-heuristic]], comparing the current state to the goal and selecting actions that reduce the difference.
 - Decomposes problems via regression — working backward from the goal — and solves sub-problems separately, similar in spirit to dynamic programming but without a clean decomposition guarantee.
 - Superseded from the 1980s by partial-order causal-link planning, then from the 1990s by GraphPlan, SATPlan, and heuristic search planning.
 
